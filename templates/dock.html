@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dock de Controle - Reacts</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; padding: 15px; margin: 0; }
+        h3 { color: #ffffff; margin-top: 20px; font-size: 16px; border-bottom: 1px solid #333; padding-bottom: 5px; text-transform: uppercase; }
+        input[type="text"] { background-color: #2d2d2d; color: #ffffff; border: 1px solid #444; border-radius: 4px; padding: 10px; margin-bottom: 8px; width: 100%; box-sizing: border-box; }
+        .btn-add-fila { background-color: #007bff; color: #fff; width: 100%; margin-bottom: 15px; padding: 10px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; }
+        .item-fila { background-color: #262626; border: 1px solid #3a3a3a; padding: 12px; margin: 8px 0; border-radius: 6px; }
+        .topo { border: 2px solid #53FC18; background-color: #1e291b; }
+        .titulo-video { font-size: 14px; font-weight: bold; color: #ffffff; display: block; margin-bottom: 4px; }
+        .meta-video { font-size: 12px; color: #aaaaaa; display: block; }
+        .botoes-inline { display: flex; gap: 6px; margin-top: 8px; }
+        button { cursor: pointer; font-weight: 600; border-radius: 4px; border: none; padding: 8px 12px; font-size: 12px; }
+        .btn-mover-proximo { background-color: #17a2b8; color: #fff; }
+        .btn-remove { background-color: #dc3545; color: #fff; margin-left: auto; }
+    </style>
+</head>
+<body>
+
+    <h3>Adicionar Novo React</h3>
+    <input type="text" id="url" placeholder="Insira o Link do YouTube">
+    <input type="text" id="ouvinte" placeholder="Nome do Ouvinte / Subscriber">
+    <button class="btn-add-fila" onclick="adicionarVideo()">Adicionar à Fila</button>
+
+    <h3>Fila de Reprodução</h3>
+    <div id="lista-playlist"></div>
+
+    <script>
+        async function carregarPlaylist() {
+            try {
+                const res = await fetch('/api/estado_sincronizado');
+                const dados = await res.json();
+                const playlist = dados.lista_completa;
+                
+                const lista = document.getElementById('lista-playlist');
+                lista.innerHTML = '';
+
+                playlist.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = `item-fila ${index === 0 ? 'topo' : ''}`;
+                    
+                    let botoesHTML = '<div class="botoes-inline">';
+                    if (index > 1) {
+                        botoesHTML += `<button class="btn-mover-proximo" onclick="moverProximo('${item.id}')">Puxar p/ Próximo</button>`;
+                    }
+                    botoesHTML += `<button class="btn-remove" onclick="removerVideo('${item.id}')">Remover</button>`;
+                    botoesHTML += '</div>';
+
+                    let statusLabel = "Aguardando na fila";
+                    if (index === 0) {
+                        statusLabel = dados.status === "tocando" ? "Tocando Agora" : "Pausado";
+                    }
+
+                    div.innerHTML = `
+                        <span class="titulo-video">${item.titulo}</span>
+                        <span class="meta-video">Pedido por: <strong>${item.ouvinte}</strong> | Status: ${statusLabel}</span>
+                        ${botoesHTML}
+                    `;
+                    lista.appendChild(div);
+                });
+            } catch (erro) { console.error(erro); }
+        }
+
+        async function adicionarVideo() {
+            const url = document.getElementById('url').value;
+            const ouvinte = document.getElementById('ouvinte').value;
+            if(!url) return;
+            await fetch('/api/adicionar', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({url, ouvinte: ouvinte || 'Anônimo'})
+            });
+            document.getElementById('url').value = '';
+            document.getElementById('ouvinte').value = '';
+            carregarPlaylist();
+        }
+
+        async function moverProximo(id) {
+            await fetch(`/api/mover_para_proximo/${id}`, { method: 'POST' });
+            carregarPlaylist();
+        }
+
+        async function removerVideo(id) {
+            await fetch(`/api/remover/${id}`, { method: 'DELETE' });
+            carregarPlaylist();
+        }
+
+        setInterval(carregarPlaylist, 1500);
+        carregarPlaylist();
+    </script>
+</body>
+</html>

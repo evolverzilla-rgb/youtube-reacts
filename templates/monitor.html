@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor Mestre - vovozilla</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #111; display: flex; overflow: hidden; font-family: sans-serif; }
+        .lado-esquerdo { flex: 3; height: 100%; background: #000; position: relative; }
+        .lado-direito { flex: 1; display: flex; flex-direction: column; height: 100%; border-left: 2px solid #333; }
+        .chat-container { flex: 1; height: 50%; display: flex; flex-direction: column; }
+        .chat-titulo { background: #222; color: #fff; padding: 5px; font-size: 12px; text-transform: uppercase; font-weight: bold; text-align: center; }
+        #player { width: 100%; height: 100%; border: none; }
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Tela de Interação Inicial */
+        #bloqueio-inicial {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .btn-despertar {
+            background-color: #53FC18;
+            color: #000000;
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(83, 252, 24, 0.4);
+        }
+
+        /* Alerta de Fila Vazia */
+        #aviso-fila-vazia {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff4444;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lado-esquerdo">
+        <!-- Bloqueio que força o clique inicial exigido pelo navegador -->
+        <div id="bloqueio-inicial">
+            <button class="btn-despertar" onclick="despertarMonitor()">Ligar Monitor de Reacts</button>
+        </div>
+
+        <div id="aviso-fila-vazia">NENHUM VÍDEO NA FILA FIFO.<br><small style="color:#aaa;">Insira um link no Dock para iniciar.</small></div>
+        
+        <div id="player"></div>
+    </div>
+
+    <div class="lado-direito">
+        <!-- Chat Twitch -->
+        <!-- <div class="chat-container"> -->
+        <!--     <div class="chat-titulo" style="border-bottom: 2px solid #9146FF;">Chat Twitch</div> -->
+        <!--     <iframe src="https://nightdev.com/hosted/obschat?theme=undefined&channel=vovozilla&fade=false&bot_activity=false&prevent_clipping=false"></iframe> -->
+        <!-- </div> -->
+        
+        
+        <!-- Chat Kick -->
+        <div class="chat-container" style="border-top: 2px solid #333;">
+            <div class="chat-titulo" style="border-bottom: 2px solid #53FC18; color: #53FC18;">Chat</div>
+            <iframe src="https://unified-chat.com/?twitch=vovozilla&kick=vovozilla&expand=1"></iframe>
+        </div>
+
+    </div>
+
+    <script>
+        let player = null;
+        let videoIdAtivo = null;
+        let apiPronta = false;
+        let monitorAtivado = false;
+
+        function despertarMonitor() {
+            monitorAtivado = true;
+            document.getElementById("bloqueio-inicial").style.display = "none";
+            
+            // --- CARREGAMENTO SEGURO DA API DO YOUTUBE ---
+            // Injeção direta no head de forma limpa, evitando erros de array no DOM
+            var dominioBase = "https://youtube.com";
+            var caminhoApi = "/iframe_api";
+            var linkCompletoApi = dominioBase + caminhoApi;
+
+            var tagScript = document.createElement('script');
+            tagScript.src = linkCompletoApi;
+            document.head.appendChild(tagScript);
+        }
+
+        // Executado de forma automática assim que a tag injetada acima terminar de baixar
+        function onYouTubeIframeAPIReady() {
+            apiPronta = true;
+            setInterval(sincronizarComPython, 1000);
+        }
+
+        async function sincronizarComPython() {
+            if (!apiPronta || !monitorAtivado) return;
+            try {
+                const res = await fetch('/api/estado_sincronizado');
+                const dados = await res.json();
+
+                // Se o arquivo JSON estiver vazio, exibe o texto de alerta em tela
+                if (!dados.id) {
+                    if (player && typeof player.stopVideo === 'function') player.stopVideo();
+                    document.getElementById("aviso-fila-vazia").style.display = "block";
+                    videoIdAtivo = null;
+                    return;
+                }
+
+                // Oculta o aviso caso tenha vídeo rodando
+                document.getElementById("aviso-fila-vazia").style.display = "none";
+
+                if (videoIdAtivo !== dados.id) {
+                    videoIdAtivo = dados.id;
+                    if (!player) {
+                        player = new YT.Player('player', {
+                            height: '100%', width: '100%', videoId: dados.id,
+                            playerVars: { 'autoplay': 1, 'controls': 1, 'rel': 0 },
+                            events: { 'onStateChange': onPlayerStateChange }
+                        });
+                    } else if (typeof player.loadVideoById === 'function') {
+                        player.loadVideoById({ videoId: dados.id });
+                    }
+                }
+
+                if (player && typeof player.getPlayerState === 'function') {
+                    const state = player.getPlayerState();
+                    
+                    if (dados.status === 'tocando' && state !== YT.PlayerState.PLAYING) {
+                        player.playVideo();
+                    } else if (dados.status !== 'tocando' && state === YT.PlayerState.PLAYING) {
+                        player.pauseVideo();
+                    }
+
+                    if (state === YT.PlayerState.PLAYING && typeof player.getCurrentTime === 'function') {
+                        fetch('/api/atualizar_tempo', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({ tempo: player.getCurrentTime() })
+                        });
+                    }
+                }
+            } catch (e) { console.error("Falha na requisição de sincronia:", e); }
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.PLAYING) enviarStatus('tocando');
+            if (event.data === YT.PlayerState.PAUSED) enviarStatus('pausado');
+            if (event.data === YT.PlayerState.ENDED) {
+                fetch(`/api/remover/${videoIdAtivo}`, { method: 'DELETE' });
+                videoIdAtivo = null;
+            }
+        }
+
+        async function enviarStatus(st) {
+            await fetch('/api/status', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ status: st })
+            });
+        }
+    </script>
+</body>
+</html>

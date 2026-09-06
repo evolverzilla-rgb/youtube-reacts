@@ -1,3 +1,40 @@
+import os
+import json
+import time
+import threading
+import subprocess
+import glob
+import re
+from json2srt import json_to_srt
+
+# Mantendo o mesmo nome exato do arquivo do seu repositório
+PLAYLIST_FILE = "dados_playilst.json"
+LOG_FILE = "legendas.log"
+
+def gravar_no_log(mensagem):
+    """Escreve as mensagens de monitoramento no arquivo de log isolado com timestamp"""
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    linha_log = f"[{timestamp}] {mensagem}\n"
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(linha_log)
+    except Exception as e:
+        print(f"Erro ao gravar no arquivo de log: {e}")
+
+def ler_fila_reprodutor():
+    """Lê a fila FIFO diretamente do arquivo JSON com segurança"""
+    if not os.path.exists(PLAYLIST_FILE):
+        return []
+    try:
+        with open(PLAYLIST_FILE, 'r', encoding='utf-8') as f:
+            conteudo = f.read().strip()
+            if not conteudo:
+                return []
+            return json.loads(conteudo)
+    except Exception as e:
+        gravar_no_log(f"Erro ao ler arquivo da fila: {e}")
+        return []
+
 def thread_varredura_legendas():
     """Loop perpétuo em segundo plano que caça e baixa legendas pendentes de forma silenciosa"""
     gravar_no_log("Serviço de varredura em segundo plano INICIADO com sucesso.")
@@ -121,3 +158,8 @@ def thread_varredura_legendas():
             
         # Tempo de folga cíclica do loop
         time.sleep(5)
+
+def iniciar_servico_legendas():
+    """Inicia a sub-rotina global de legendas em uma Thread separada"""
+    threading_worker = threading.Thread(target=thread_varredura_legendas, daemon=True)
+    threading_worker.start()

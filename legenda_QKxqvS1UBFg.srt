@@ -1,0 +1,2727 @@
+1
+00:00:00,240 --> 00:00:03,200
+Olá, eu sou Aloe, uma VTuber, e recentemente
+
+2
+00:00:03,200 --> 00:00:05,200
+fiz algo que provavelmente não foi a
+
+3
+00:00:05,200 --> 00:00:07,839
+decisão mais inteligente que já tomei.  Eu
+
+4
+00:00:07,839 --> 00:00:10,160
+migrei todo o meu computador do Windows para o
+
+5
+00:00:10,160 --> 00:00:13,040
+Linux.  E não apenas para jogos.  Eu uso
+
+6
+00:00:13,040 --> 00:00:15,120
+este computador para praticamente tudo o que
+
+7
+00:00:15,120 --> 00:00:17,920
+faço como criador de conteúdo, desde transmissões
+
+8
+00:00:17,920 --> 00:00:21,600
+ao vivo e Vtubing até edição, design gráfico, Discord e
+
+9
+00:00:21,600 --> 00:00:24,160
+gravação.  Então, naturalmente, a pergunta
+
+10
+00:00:24,160 --> 00:00:26,960
+é: você pode realmente ser um VTuber
+
+11
+00:00:26,960 --> 00:00:29,679
+no Linux?  E depois de passar a última
+
+12
+00:00:29,679 --> 00:00:32,079
+semana tentando descobrir isso, a resposta é
+
+13
+00:00:32,079 --> 00:00:34,960
+sim.  Há um asterisco bem grande
+
+14
+00:00:34,960 --> 00:00:36,719
+associado à [música] que responde.  Porque,
+
+15
+00:00:36,719 --> 00:00:38,239
+embora a maior parte da minha configuração funcione
+
+16
+00:00:38,239 --> 00:00:40,640
+surpreendentemente bem, também passei
+
+17
+00:00:40,640 --> 00:00:42,480
+várias horas lutando contra um software que
+
+18
+00:00:42,480 --> 00:00:44,559
+aparentemente acredita que o Linux não deveria
+
+19
+00:00:44,559 --> 00:00:47,600
+existir.  Então, hoje, vou compartilhar com
+
+20
+00:00:47,600 --> 00:00:49,680
+vocês minha experiência ao migrar
+
+21
+00:00:49,680 --> 00:00:52,960
+para o Nabara Linux como VTuber.  O que
+
+22
+00:00:52,960 --> 00:00:55,199
+funcionou, o que não funcionou, as soluções alternativas que
+
+23
+00:00:55,199 --> 00:00:57,520
+tive que encontrar e se realmente
+
+24
+00:00:57,520 --> 00:01:04,559
+acho que a mudança valeu a pena.
+
+25
+00:01:04,559 --> 00:01:07,760
+Então, por que eu mudei de plataforma, afinal?
+
+26
+00:01:07,760 --> 00:01:09,430
+Sinceramente, havia alguns motivos.
+
+27
+00:01:09,430 --> 00:01:11,119
+[música] Na verdade, tudo começou uma noite
+
+28
+00:01:11,119 --> 00:01:13,520
+quando eu estava sentado no meu computador fazendo
+
+29
+00:01:13,520 --> 00:01:15,280
+coisas completamente normais.  Nada
+
+30
+00:01:15,280 --> 00:01:18,240
+intenso, nenhuma carga de trabalho pesada, nenhum jogo que
+
+31
+00:01:18,240 --> 00:01:20,880
+force o sistema, nada.  E
+
+32
+00:01:20,880 --> 00:01:23,360
+de repente, do nada, surge uma caixa de diálogo
+
+33
+00:01:23,360 --> 00:01:25,680
+[música] que diz que o
+
+34
+00:01:25,680 --> 00:01:27,520
+sistema operacional Microsoft Windows parou de
+
+35
+00:01:27,520 --> 00:01:30,400
+responder.  E o mais estranho é que estava
+
+36
+00:01:30,400 --> 00:01:33,040
+tudo bem.  Não houve atrasos,
+
+37
+00:01:33,040 --> 00:01:36,400
+congelamentos, sinais de alerta ou
+
+38
+00:01:36,400 --> 00:01:38,640
+aumento repentino da velocidade da ventoinha como se meu PC estivesse prestes a
+
+39
+00:01:38,640 --> 00:01:41,920
+decolar para a órbita.  Simplesmente o Windows decidiu por conta
+
+40
+00:01:41,920 --> 00:01:43,840
+própria que não estava mais
+
+41
+00:01:43,840 --> 00:01:46,079
+respondendo.  E eu me lembro de estar sentada
+
+42
+00:01:46,079 --> 00:01:48,640
+lá pensando: "Ok, mas você está
+
+43
+00:01:48,640 --> 00:01:50,960
+literalmente respondendo agora."  Aquele
+
+44
+00:01:50,960 --> 00:01:53,200
+momento ficou marcado na minha memória porque
+
+45
+00:01:53,200 --> 00:01:55,360
+nem sequer foi uma colisão dramática.  Era
+
+46
+00:01:55,360 --> 00:01:57,360
+apenas essa desinformação silenciosa e confiante
+
+47
+00:01:57,360 --> 00:01:59,520
+proveniente do meu próprio
+
+48
+00:01:59,520 --> 00:02:01,680
+sistema operacional.  E acho que foi nesse ponto que
+
+49
+00:02:01,680 --> 00:02:03,680
+comecei a questionar as
+
+50
+00:02:03,680 --> 00:02:06,079
+coisas seriamente.  Já fazia algum tempo que eu vinha pensando em migrar
+
+51
+00:02:06,079 --> 00:02:08,479
+para o Linux.  E eventualmente
+
+52
+00:02:08,479 --> 00:02:10,479
+cheguei ao ponto em que pensei: "Quer saber?
+
+53
+00:02:10,479 --> 00:02:12,800
+Vou simplesmente fazer isso."
+
+54
+00:02:12,800 --> 00:02:14,800
+O que provavelmente não é a
+
+55
+00:02:14,800 --> 00:02:16,800
+maneira mais tranquilizadora de começar uma
+
+56
+00:02:16,800 --> 00:02:19,440
+migração de sistema operacional, mas eu queria tentar
+
+57
+00:02:19,440 --> 00:02:20,800
+algo diferente.  [música] Eu queria ter
+
+58
+00:02:20,800 --> 00:02:23,040
+mais controle sobre o meu sistema e
+
+59
+00:02:23,040 --> 00:02:25,200
+queria ver o quão viável o Linux realmente
+
+60
+00:02:25,200 --> 00:02:27,760
+era para as coisas que eu faço todos os dias.  E
+
+61
+00:02:27,760 --> 00:02:29,760
+como sou uma VTuber, não podia simplesmente
+
+62
+00:02:29,760 --> 00:02:32,640
+perguntar: "Meus jogos vão funcionar?"  Eu tinha uma lista de
+
+63
+00:02:32,640 --> 00:02:35,519
+verificação muito mais longa.  O OBS funcionaria?  Será que
+
+64
+00:02:35,519 --> 00:02:37,519
+minha configuração de VTuber funcionaria?  Meu
+
+65
+00:02:37,519 --> 00:02:39,920
+microfone e configuração de áudio funcionariam?  Eu poderia
+
+66
+00:02:39,920 --> 00:02:42,239
+editar vídeos?  Será que eu poderia criar gráficos?
+
+67
+00:02:42,239 --> 00:02:44,080
+Eu ainda poderia usar o software
+
+68
+00:02:44,080 --> 00:02:46,560
+em torno do qual já havia configurado meu fluxo de trabalho?  E
+
+69
+00:02:46,560 --> 00:02:48,959
+provavelmente a pergunta mais importante:
+
+70
+00:02:48,959 --> 00:02:51,200
+será que eu conseguiria fazer tudo isso sem ter
+
+71
+00:02:51,200 --> 00:02:52,800
+vontade de jogar meu computador pela
+
+72
+00:02:52,800 --> 00:02:55,360
+janela?  Então, [música] decidi
+
+73
+00:02:55,360 --> 00:03:00,879
+descobrir.
+
+74
+00:03:00,879 --> 00:03:03,200
+Para minha distribuição Linux, acabei
+
+75
+00:03:03,200 --> 00:03:05,599
+escolhendo o Novara Linux.  Eu queria
+
+76
+00:03:05,599 --> 00:03:06,959
+algo que fosse amigável para
+
+77
+00:03:06,959 --> 00:03:09,360
+jogos e criação de conteúdo, sem
+
+78
+00:03:09,360 --> 00:03:11,440
+ter que configurar manualmente tudo
+
+79
+00:03:11,440 --> 00:03:14,000
+do zero.  E eu já sabia de antemão que o
+
+80
+00:03:14,000 --> 00:03:16,239
+Linux envolveria
+
+81
+00:03:16,239 --> 00:03:18,879
+alguma resolução de problemas.  Acho que simplesmente não tinha
+
+82
+00:03:18,879 --> 00:03:20,879
+noção de quanta
+
+83
+00:03:20,879 --> 00:03:23,360
+solução de problemas era necessária, porque instalar o Linux em si foi
+
+84
+00:03:23,360 --> 00:03:28,800
+bem fácil, para ser sincero.
+
+85
+00:03:28,800 --> 00:03:31,440
+Depois de conseguir tudo o que eu queria usar, foi aí que a aventura
+
+86
+00:03:31,440 --> 00:03:37,360
+começou.
+
+87
+00:03:37,360 --> 00:03:40,720
+Então, o Linux está instalado, meu desktop está
+
+88
+00:03:40,720 --> 00:03:43,200
+funcionando, meus jogos estão funcionando e agora
+
+89
+00:03:43,200 --> 00:03:45,360
+chegou a hora da verdade.  Posso
+
+90
+00:03:45,360 --> 00:03:47,440
+mesmo fazer V?
+
+91
+00:03:47,440 --> 00:03:49,519
+Porque essa era provavelmente a parte que
+
+92
+00:03:49,519 --> 00:03:51,760
+mais me deixava nervoso.  Uma coisa é
+
+93
+00:03:51,760 --> 00:03:53,840
+conseguir executar um jogo no Linux.  É
+
+94
+00:03:53,840 --> 00:03:55,920
+completamente diferente fazer com que todos os
+
+95
+00:03:55,920 --> 00:03:58,640
+softwares que eu usava para transmitir, gravar,
+
+96
+00:03:58,640 --> 00:04:01,760
+gerenciar áudio e, de fato, colocar meu avatar
+
+97
+00:04:01,760 --> 00:04:04,319
+na tela, funcionem juntos.  [música] E,
+
+98
+00:04:04,319 --> 00:04:06,480
+felizmente, essa parte não foi nem de longe tão
+
+99
+00:04:06,480 --> 00:04:09,760
+assustadora quanto eu esperava.  O OBS foi uma das
+
+100
+00:04:09,760 --> 00:04:11,840
+primeiras coisas que configurei.  E,
+
+101
+00:04:11,840 --> 00:04:14,720
+sinceramente, funcionou.  Eu conseguia ver minhas
+
+102
+00:04:14,720 --> 00:04:16,400
+cenas, [capturar música] meus jogos,
+
+103
+00:04:16,400 --> 00:04:19,040
+configurar minhas fontes e deixar o layout da minha transmissão
+
+104
+00:04:19,040 --> 00:04:21,199
+praticamente do jeito que eu estava
+
+105
+00:04:21,199 --> 00:04:23,520
+acostumado.  [música] O Discord funcionou, meu
+
+106
+00:04:23,520 --> 00:04:27,440
+microfone funcionou, meu navegador funcionou
+
+107
+00:04:27,440 --> 00:04:29,600
+e, depois que configurei tudo,
+
+108
+00:04:29,600 --> 00:04:31,840
+o processo de transmissão em si não
+
+109
+00:04:31,840 --> 00:04:34,240
+pareceu tão diferente do Windows,
+
+110
+00:04:34,240 --> 00:04:36,560
+o que foi honestamente um pouco surpreendente
+
+111
+00:04:36,560 --> 00:04:38,378
+porque, ao começar isso, eu esperava
+
+112
+00:04:38,378 --> 00:04:38,960
+[música]
+
+113
+00:04:38,960 --> 00:04:40,720
+que estaria constantemente lutando contra o
+
+114
+00:04:40,720 --> 00:04:43,520
+Linux só para fazer coisas básicas de transmissão.
+
+115
+00:04:43,520 --> 00:04:45,919
+Mas na realidade não era esse o caso.  E
+
+116
+00:04:45,919 --> 00:04:47,840
+isso é algo que considero importante
+
+117
+00:04:47,840 --> 00:04:50,160
+destacar.  O Linux não me deu trabalho a
+
+118
+00:04:50,160 --> 00:04:52,160
+cada passo do caminho.  Muitas das
+
+119
+00:04:52,160 --> 00:04:54,320
+coisas básicas de que eu precisava como criador eram,
+
+120
+00:04:54,320 --> 00:04:56,400
+na verdade, bem simples.  O
+
+121
+00:04:56,400 --> 00:04:58,320
+problema começou quando entrei nas
+
+122
+00:04:58,320 --> 00:05:05,919
+partes mais específicas do meu fluxo de trabalho como VTuber.   É aqui que as
+
+123
+00:05:05,919 --> 00:05:08,080
+coisas ficam um pouco
+
+124
+00:05:08,080 --> 00:05:10,720
+mais complicadas.  Não existe exatamente um
+
+125
+00:05:10,720 --> 00:05:12,639
+botão gigante que diga "[música] instale
+
+126
+00:05:12,639 --> 00:05:14,720
+tudo o que um YouTuber precisa", o que,
+
+127
+00:05:14,720 --> 00:05:17,360
+honestamente, seria muito conveniente.
+
+128
+00:05:17,360 --> 00:05:18,880
+Em vez disso, tive que descobrir quais
+
+129
+00:05:18,880 --> 00:05:21,520
+programas tinham versões nativas para Linux,
+
+130
+00:05:21,520 --> 00:05:23,840
+quais tinham alternativas, quais
+
+131
+00:05:23,840 --> 00:05:26,000
+podiam ser executados por meio de camadas de compatibilidade
+
+132
+00:05:26,000 --> 00:05:27,600
+e quais me fariam
+
+133
+00:05:27,600 --> 00:05:30,000
+questionar minhas escolhas de vida.  E foi aí que
+
+134
+00:05:30,000 --> 00:05:31,520
+aprendi uma das
+
+135
+00:05:31,520 --> 00:05:33,360
+coisas mais importantes sobre usar o Linux como
+
+136
+00:05:33,360 --> 00:05:35,199
+VTuber.  Você precisa [da música] para se sentir
+
+137
+00:05:35,199 --> 00:05:37,280
+confortável com a frase,
+
+138
+00:05:37,280 --> 00:05:39,600
+provavelmente existe uma solução alternativa.  Porque nove
+
+139
+00:05:39,600 --> 00:05:42,639
+em cada dez vezes, na verdade, existe.  O
+
+140
+00:05:42,639 --> 00:05:44,720
+problema é que a "solução alternativa" pode
+
+141
+00:05:44,720 --> 00:05:46,880
+significar qualquer coisa, desde baixar [música] esta
+
+142
+00:05:46,880 --> 00:05:49,440
+alternativa nativa do Linux e pronto, até "
+
+143
+00:05:49,440 --> 00:05:52,720
+ok, abra o terminal e de repente
+
+144
+00:05:52,720 --> 00:05:54,800
+estou há 3 horas mergulhado em um
+
+145
+00:05:54,800 --> 00:06:02,560
+repositório do GitHub, me perguntando como cheguei a essa situação".
+
+146
+00:06:02,560 --> 00:06:04,560
+Então, uma das primeiras coisas que eu queria
+
+147
+00:06:04,560 --> 00:06:06,560
+descobrir era como usar o meu
+
+148
+00:06:06,560 --> 00:06:08,560
+software de VTuber.  Porque se eu fosse me
+
+149
+00:06:08,560 --> 00:06:11,120
+comprometer a ser um VTuber no Linux, eu
+
+150
+00:06:11,120 --> 00:06:12,720
+não queria que toda a minha configuração [de música]
+
+151
+00:06:12,720 --> 00:06:14,800
+dependesse de fingir que o Linux era o
+
+152
+00:06:14,800 --> 00:06:16,400
+Windows.   Foi aí que
+
+153
+00:06:16,400 --> 00:06:19,840
+descobri o OpenVT.  OpenVT é um
+
+154
+00:06:19,840 --> 00:06:22,319
+programa de Vtuber 2D de código aberto, desenvolvido com
+
+155
+00:06:22,319 --> 00:06:24,960
+foco na disponibilidade para Linux.  Então, no
+
+156
+00:06:24,960 --> 00:06:26,800
+papel, parecia quase perfeito para
+
+157
+00:06:26,800 --> 00:06:29,600
+o que eu estava tentando fazer.  Um
+
+158
+00:06:29,600 --> 00:06:33,280
+programa VTuber nativo para Linux.  Com certeza!  Quero me inscrever.
+
+159
+00:06:33,280 --> 00:06:35,199
+E foi aí que aprendi uma
+
+160
+00:06:35,199 --> 00:06:38,160
+lição importante sobre o software Linux.  O fato de existir
+
+161
+00:06:38,160 --> 00:06:40,800
+e funcionar exatamente como eu quero são duas
+
+162
+00:06:40,800 --> 00:06:43,680
+coisas muito diferentes.  Agora, quero
+
+163
+00:06:43,680 --> 00:06:46,000
+deixar claro que não acho que o OpenVT
+
+164
+00:06:46,000 --> 00:06:48,639
+seja necessariamente ruim.  Pelo que pude
+
+165
+00:06:48,639 --> 00:06:50,639
+perceber, ainda parecia estar
+
+166
+00:06:50,639 --> 00:06:53,120
+em fase de testes ou desenvolvimento inicial
+
+167
+00:06:53,120 --> 00:06:55,929
+, e isso refletia minha experiência
+
+168
+00:06:55,929 --> 00:06:58,240
+[musical] com o projeto.  O programa apresentou lentidão.
+
+169
+00:06:58,240 --> 00:07:00,639
+Os menus eram um pouco estranhos.  E
+
+170
+00:07:00,639 --> 00:07:02,800
+conseguir que meu modelo apareça de fato
+
+171
+00:07:02,800 --> 00:07:05,680
+dentro da janela de teste.  Parecia que foi preciso
+
+172
+00:07:05,680 --> 00:07:08,800
+um ato do Congresso.  Passei
+
+173
+00:07:08,800 --> 00:07:10,960
+muito mais tempo do que esperava apenas
+
+174
+00:07:10,960 --> 00:07:12,880
+tentando fazer as peças básicas funcionarem
+
+175
+00:07:12,880 --> 00:07:15,599
+juntas.  E no fim das contas, tive que analisar
+
+176
+00:07:15,599 --> 00:07:18,000
+minha configuração atual e pensar: "Quer saber? O
+
+177
+00:07:18,000 --> 00:07:21,599
+YouTube Studio, usando o Proton,
+
+178
+00:07:21,599 --> 00:07:23,680
+já funciona."
+
+179
+00:07:23,680 --> 00:07:25,680
+Então, voltei [à música] para o meu ambiente de trabalho
+
+180
+00:07:25,680 --> 00:07:28,000
+e, honestamente, estou bem com isso, porque
+
+181
+00:07:28,000 --> 00:07:30,080
+esta é realmente uma lição bastante útil
+
+182
+00:07:30,080 --> 00:07:32,560
+para mim.  Às vezes, usar Linux não
+
+183
+00:07:32,560 --> 00:07:34,560
+significa encontrar um substituto nativo perfeito
+
+184
+00:07:34,560 --> 00:07:36,960
+para tudo.  Às vezes,
+
+185
+00:07:36,960 --> 00:07:39,599
+a melhor solução é simplesmente a alternativa que
+
+186
+00:07:39,599 --> 00:07:41,919
+já funciona, então vou usar a
+
+187
+00:07:41,919 --> 00:07:44,720
+alternativa.  E isso é algo que acho que
+
+188
+00:07:44,720 --> 00:07:46,639
+vale a pena lembrar se você está pensando
+
+189
+00:07:46,639 --> 00:07:48,800
+em migrar para o Linux.  Você não
+
+190
+00:07:48,800 --> 00:07:51,120
+precisa necessariamente substituir todos os
+
+191
+00:07:51,120 --> 00:07:54,160
+softwares que utiliza.  Às vezes você simplesmente
+
+192
+00:07:54,160 --> 00:07:56,479
+precisa descobrir o que funciona para você.
+
+193
+00:07:56,479 --> 00:07:59,280
+E assim que configurei meu ambiente de VTuber,
+
+194
+00:07:59,280 --> 00:08:01,120
+finalmente pude passar para o próximo
+
+195
+00:08:01,120 --> 00:08:03,840
+problema: meu software de criação de conteúdo
+
+196
+00:08:03,840 --> 00:08:06,160
+.  E foi aí que as coisas ficaram
+
+197
+00:08:06,160 --> 00:08:13,280
+significativamente mais amaldiçoadas.
+
+198
+00:08:13,280 --> 00:08:15,280
+Então, agora chegamos provavelmente ao maior
+
+199
+00:08:15,280 --> 00:08:17,759
+problema que tive depois de mudar para o Linux:
+
+200
+00:08:17,759 --> 00:08:20,800
+meu software gráfico.  Como VTuber e
+
+201
+00:08:20,800 --> 00:08:22,800
+criadora de conteúdo, uso software gráfico
+
+202
+00:08:22,800 --> 00:08:25,039
+para praticamente tudo.  Miniaturas,
+
+203
+00:08:25,039 --> 00:08:28,000
+gráficos para transmissões ao vivo, arte para o canal, edição de
+
+204
+00:08:28,000 --> 00:08:30,400
+fotos, criação de recursos para meu
+
+205
+00:08:30,400 --> 00:08:32,959
+conteúdo de VTuber.  E antes de migrar para o Linux, eu
+
+206
+00:08:32,959 --> 00:08:35,200
+usava o Affinity Photo 2 para fazer boa parte
+
+207
+00:08:35,200 --> 00:08:37,919
+disso.  Então, naturalmente, eu quis continuar
+
+208
+00:08:37,919 --> 00:08:41,200
+usando.  E foi aí que aprendi
+
+209
+00:08:41,200 --> 00:08:43,200
+que só porque um aplicativo do Windows
+
+210
+00:08:43,200 --> 00:08:46,480
+teoricamente pode rodar no Linux, não
+
+211
+00:08:46,480 --> 00:08:48,880
+significa que ele vai funcionar bem lá.   O
+
+212
+00:08:48,880 --> 00:08:50,880
+Affinity Photo 2 não possui uma
+
+213
+00:08:50,880 --> 00:08:53,120
+versão nativa para Linux.  Então, comecei a procurar
+
+214
+00:08:53,120 --> 00:08:55,279
+maneiras de executá-lo por meio de "bottles", que
+
+215
+00:08:55,279 --> 00:08:57,200
+permite criar ambientes Windows para
+
+216
+00:08:57,200 --> 00:08:59,760
+executar aplicativos Windows no Linux.
+
+217
+00:08:59,760 --> 00:09:02,000
+E a princípio, pensei: "Ok, isso
+
+218
+00:09:02,000 --> 00:09:04,880
+não deve ser tão ruim".  Essas são as minhas
+
+219
+00:09:04,880 --> 00:09:07,120
+famosas últimas palavras.
+
+220
+00:09:07,120 --> 00:09:10,320
+Instalei o Affinity.  Eu meio que consegui fazer
+
+221
+00:09:10,320 --> 00:09:13,440
+funcionar, e então começou a
+
+222
+00:09:13,440 --> 00:09:15,360
+me informar sobre componentes do Windows que não estavam
+
+223
+00:09:15,360 --> 00:09:18,480
+lá.  Então comecei a solucionar problemas e
+
+224
+00:09:18,480 --> 00:09:20,480
+depois continuei a solucionar problemas.
+
+225
+00:09:20,480 --> 00:09:22,240
+Por fim, acabei vasculhando os
+
+226
+00:09:22,240 --> 00:09:24,720
+arquivos de metadados do Windows [música] porque o
+
+227
+00:09:24,720 --> 00:09:26,399
+Affinity estava procurando por
+
+228
+00:09:26,399 --> 00:09:28,560
+componentes do Windows que não estavam sendo reconhecidos
+
+229
+00:09:28,560 --> 00:09:31,200
+dentro do ambiente do Bottle.  Em um dado
+
+230
+00:09:31,200 --> 00:09:32,720
+momento, eu estava literalmente vasculhando
+
+231
+00:09:32,720 --> 00:09:35,360
+pastas como se fossem metadados,
+
+232
+00:09:35,360 --> 00:09:36,880
+tentando descobrir quais
+
+233
+00:09:36,880 --> 00:09:40,000
+arquivos de metadados do Windows o Affinity precisava.  Encontrei
+
+234
+00:09:40,000 --> 00:09:42,320
+alguns dos arquivos que ele estava procurando.
+
+235
+00:09:42,320 --> 00:09:44,240
+Certifiquei-me de que eles estivessem realmente no
+
+236
+00:09:44,240 --> 00:09:46,240
+ambiente.  Verifiquei os
+
+237
+00:09:46,240 --> 00:09:48,320
+diretórios relevantes do Windows.  Tentei várias
+
+238
+00:09:48,320 --> 00:09:50,720
+soluções.  Voltei e verifiquei tudo
+
+239
+00:09:50,720 --> 00:09:54,080
+novamente.  E depois de tudo isso, o Affinity
+
+240
+00:09:54,080 --> 00:09:56,800
+ainda apresentava erros e continuava travando.
+
+241
+00:09:56,800 --> 00:09:59,200
+Nesse ponto, o que começou como uma simples
+
+242
+00:09:59,200 --> 00:10:02,399
+instalação do meu programa gráfico habitual
+
+243
+00:10:02,399 --> 00:10:04,560
+se transformou em uma aventura paralela de 3 a 4 horas no Linux,
+
+244
+00:10:04,560 --> 00:10:06,480
+onde eu basicamente tentava
+
+245
+00:10:06,480 --> 00:10:08,959
+convencer um aplicativo do Windows de que
+
+246
+00:10:08,959 --> 00:10:11,360
+componentes do Windows existiam dentro de um
+
+247
+00:10:11,360 --> 00:10:13,760
+ambiente Windows falso.  E, no fim, tive que
+
+248
+00:10:13,760 --> 00:10:16,000
+aceitar algo.  Eu precisava de um
+
+249
+00:10:16,000 --> 00:10:18,720
+plano B porque, por mais que eu
+
+250
+00:10:18,720 --> 00:10:20,880
+quisesse que o Affinity funcionasse, eu ainda precisava
+
+251
+00:10:20,880 --> 00:10:22,240
+criar miniaturas.  [música]
+
+252
+00:10:22,240 --> 00:10:24,560
+Eu ainda precisava editar as fotos.  Eu ainda
+
+253
+00:10:24,560 --> 00:10:28,160
+precisava criar os gráficos.  E eu não podia
+
+254
+00:10:28,160 --> 00:10:30,640
+contar para vocês, desculpem, a miniatura está atrasada.   A
+
+255
+00:10:30,640 --> 00:10:32,480
+Affinity está passando por uma
+
+256
+00:10:32,480 --> 00:10:37,360
+crise existencial.  Então, instalei o GIMP.  E agora,
+
+257
+00:10:37,360 --> 00:10:40,240
+quero deixar algo bem claro.  Eu
+
+258
+00:10:40,240 --> 00:10:42,800
+não desgosto do GIMP.  O GIMP é um
+
+259
+00:10:42,800 --> 00:10:45,200
+programa incrivelmente capaz e, para
+
+260
+00:10:45,200 --> 00:10:47,120
+algo que é totalmente gratuito e
+
+261
+00:10:47,120 --> 00:10:49,760
+funciona nativamente no Linux, é realmente
+
+262
+00:10:49,760 --> 00:10:52,959
+impressionante.  O problema para mim foi a
+
+263
+00:10:52,959 --> 00:10:55,680
+interface.  Eu me sinto muito mais confortável
+
+264
+00:10:55,680 --> 00:10:57,440
+com a forma como o Photoshop e o Affinity
+
+265
+00:10:57,440 --> 00:11:02,160
+Photo 2 organizam suas ferramentas e menus.
+
+266
+00:11:02,160 --> 00:11:04,480
+Abrir a interface padrão do GIMP
+
+267
+00:11:04,480 --> 00:11:06,640
+foi como se alguém tivesse reorganizado
+
+268
+00:11:06,640 --> 00:11:08,880
+toda a minha cozinha [musical] e depois me dissesse que
+
+269
+00:11:08,880 --> 00:11:11,600
+tudo ainda estava lá.  Sim, eu simplesmente
+
+270
+00:11:11,600 --> 00:11:14,880
+não sei onde diabos você colocou isso.
+
+271
+00:11:14,880 --> 00:11:17,040
+Então, comecei a procurar maneiras de tornar o
+
+272
+00:11:17,040 --> 00:11:19,279
+GIMP mais familiar.  E [música] foi aí que
+
+273
+00:11:19,279 --> 00:11:21,760
+descobri o Photo GIMP.  O Photo
+
+274
+00:11:21,760 --> 00:11:24,000
+GIMP é essencialmente uma personalização do
+
+275
+00:11:24,000 --> 00:11:26,640
+GIMP projetada para tornar a interface
+
+276
+00:11:26,640 --> 00:11:28,720
+muito mais familiar para pessoas que vêm do
+
+277
+00:11:28,720 --> 00:11:31,519
+Photoshop, e era exatamente disso que eu
+
+278
+00:11:31,519 --> 00:11:33,760
+precisava.  Então, em vez de me forçar
+
+279
+00:11:33,760 --> 00:11:36,079
+a aprender uma interface
+
+280
+00:11:36,079 --> 00:11:38,959
+com a qual não me sentia confortável, instalei o Photo GIMP
+
+281
+00:11:38,959 --> 00:11:41,120
+e personalizei minha configuração do GIMP para me sentir
+
+282
+00:11:41,120 --> 00:11:43,760
+muito mais próximo do fluxo de trabalho ao qual eu
+
+283
+00:11:43,760 --> 00:11:46,240
+já estava acostumado.  E de repente o GIMP se
+
+284
+00:11:46,240 --> 00:11:49,040
+tornou muito mais confortável de usar.  O
+
+285
+00:11:49,040 --> 00:11:51,760
+GIMP é a minha primeira escolha para edição de fotos?
+
+286
+00:11:51,760 --> 00:11:55,040
+Não. Se o Affinity Photo 2 tivesse uma
+
+287
+00:11:55,040 --> 00:11:57,680
+versão nativa para Linux que funcionasse corretamente, eu
+
+288
+00:11:57,680 --> 00:11:59,920
+provavelmente ainda o estaria usando.  Mas o GIMP
+
+289
+00:11:59,920 --> 00:12:01,600
+funciona perfeitamente assim que instalado.  É
+
+290
+00:12:01,600 --> 00:12:03,279
+potente o suficiente para lidar com o
+
+291
+00:12:03,279 --> 00:12:06,079
+trabalho criativo que preciso realizar.  E com o Photo GIMP,
+
+292
+00:12:06,079 --> 00:12:08,160
+consigo fazer com que a interface fique muito mais parecida com o
+
+293
+00:12:08,160 --> 00:12:10,000
+tipo de interface com a qual já estou
+
+294
+00:12:10,000 --> 00:12:12,240
+familiarizado.  E, honestamente, essa é
+
+295
+00:12:12,240 --> 00:12:14,079
+provavelmente uma das maiores lições que
+
+296
+00:12:14,079 --> 00:12:15,573
+aprendi com toda essa experiência.
+
+297
+00:12:15,573 --> 00:12:16,160
+[música]
+
+298
+00:12:16,160 --> 00:12:18,320
+Nem sempre você precisa de uma substituição perfeita, 1:1
+
+299
+00:12:18,320 --> 00:12:20,399
+.  Às vezes você só precisa de
+
+300
+00:12:20,399 --> 00:12:22,480
+algo que dê conta do recado.  E,
+
+301
+00:12:22,480 --> 00:12:24,240
+às vezes, você pode personalizar essa ferramenta
+
+302
+00:12:24,240 --> 00:12:26,480
+até que ela se adapte à sua maneira de trabalhar.  Então,
+
+303
+00:12:26,480 --> 00:12:28,800
+embora eu nunca tenha realmente desistido da ideia
+
+304
+00:12:28,800 --> 00:12:31,600
+de fazer o Affinity Photo 2 funcionar,
+
+305
+00:12:31,600 --> 00:12:33,600
+agora eu tinha uma maneira de finalmente criar minhas malditas
+
+306
+00:12:33,600 --> 00:12:36,320
+miniaturas.  E, honestamente, isso
+
+307
+00:12:36,320 --> 00:12:43,200
+provavelmente era mais importante.
+
+308
+00:12:43,200 --> 00:12:45,839
+Então, depois de ter
+
+309
+00:12:45,839 --> 00:12:47,839
+resolvido um pouco a situação dos meus gráficos, surgiu-me outra
+
+310
+00:12:47,839 --> 00:12:50,560
+questão bastante importante.  Com que diabos
+
+311
+00:12:50,560 --> 00:12:52,639
+vou editar meus vídeos?
+
+312
+00:12:52,639 --> 00:12:54,320
+Antes de migrar para o Linux, acabei usando o
+
+313
+00:12:54,320 --> 00:12:56,320
+Cap Cut para a
+
+314
+00:12:56,320 --> 00:12:58,480
+maior parte da minha edição de vídeo.  Era
+
+315
+00:12:58,480 --> 00:13:00,639
+familiar.  Funcionou para o que eu precisava
+
+316
+00:13:00,639 --> 00:13:02,399
+e, a essa altura, eu já estava bem
+
+317
+00:13:02,399 --> 00:13:05,600
+familiarizado com isso.  Infelizmente, o Cap
+
+318
+00:13:05,600 --> 00:13:08,399
+Cut não possui uma versão nativa para Linux.
+
+319
+00:13:08,399 --> 00:13:11,120
+E embora existam maneiras de executar alguns
+
+320
+00:13:11,120 --> 00:13:13,760
+aplicativos do Windows no Linux, eu
+
+321
+00:13:13,760 --> 00:13:15,680
+não estava particularmente interessado em
+
+322
+00:13:15,680 --> 00:13:17,839
+transformar meu editor de vídeo em mais uma
+
+323
+00:13:17,839 --> 00:13:20,800
+missão secundária de 3 horas.  Eu só queria editar
+
+324
+00:13:20,800 --> 00:13:23,040
+meus vídeos.  Então, voltei para algo que
+
+325
+00:13:23,040 --> 00:13:26,160
+eu já conhecia, o Caden Live.  E, na
+
+326
+00:13:26,160 --> 00:13:28,560
+verdade, essa não foi uma grande mudança para mim,
+
+327
+00:13:28,560 --> 00:13:31,440
+porque eu já usava o Caden Live no Windows
+
+328
+00:13:31,440 --> 00:13:33,360
+há bastante tempo antes de migrar
+
+329
+00:13:33,360 --> 00:13:36,079
+para o Cap Cut.  Então, em vez de aprender um
+
+330
+00:13:36,079 --> 00:13:38,399
+editor de vídeo completamente novo, eu
+
+331
+00:13:38,399 --> 00:13:39,920
+basicamente voltei para [a música], uma velha
+
+332
+00:13:39,920 --> 00:13:42,399
+amiga.  E, sinceramente, pareceu
+
+333
+00:13:42,399 --> 00:13:44,959
+surpreendentemente normal.  A interface era
+
+334
+00:13:44,959 --> 00:13:46,480
+familiar.  A linha do tempo [da música] funcionou
+
+335
+00:13:46,480 --> 00:13:48,959
+como eu esperava.  Eu conseguia cortar imagens,
+
+336
+00:13:48,959 --> 00:13:51,200
+adicionar transições, trabalhar com áudio, adicionar
+
+337
+00:13:51,200 --> 00:13:52,000
+texto, [música]
+
+338
+00:13:52,000 --> 00:13:54,399
+e fazer toda a edição básica de que precisava
+
+339
+00:13:54,399 --> 00:13:56,240
+sem ter que brigar com o
+
+340
+00:13:56,240 --> 00:13:59,600
+sistema operacional para que isso acontecesse.  Foi exatamente
+
+341
+00:13:59,600 --> 00:14:03,199
+igual a usar o Cap Cut?  Não.
+
+342
+00:14:03,199 --> 00:14:05,279
+Definitivamente há coisas de que sinto falta da
+
+343
+00:14:05,279 --> 00:14:07,199
+Cap Cut.  E há partes do meu
+
+344
+00:14:07,199 --> 00:14:08,880
+fluxo de trabalho de edição às quais ainda estou me
+
+345
+00:14:08,880 --> 00:14:12,000
+readaptando no Caden Live, mas
+
+346
+00:14:12,000 --> 00:14:14,639
+esse é um problema bem diferente
+
+347
+00:14:14,639 --> 00:14:17,360
+do software não funcionar no Linux.   O
+
+348
+00:14:17,360 --> 00:14:19,440
+Caden Live funciona e isso é o que
+
+349
+00:14:19,440 --> 00:14:21,600
+importa.  [música] Então, por enquanto, o Caden Live
+
+350
+00:14:21,600 --> 00:14:23,519
+basicamente se tornou meu editor de vídeo principal
+
+351
+00:14:23,519 --> 00:14:26,480
+no Linux.  E, sinceramente, é muito
+
+352
+00:14:26,480 --> 00:14:28,320
+bom voltar a usar um software que eu
+
+353
+00:14:28,320 --> 00:14:30,320
+já conhecia.
+
+354
+00:14:30,320 --> 00:14:32,800
+E não se trata apenas de edição de vídeo.  Muitos
+
+355
+00:14:32,800 --> 00:14:34,720
+outros programas que uso no meu
+
+356
+00:14:34,720 --> 00:14:37,040
+fluxo de trabalho diário como criador são
+
+357
+00:14:37,040 --> 00:14:39,600
+baseados em navegadores nativos do Linux ou têm
+
+358
+00:14:39,600 --> 00:14:44,240
+alternativas viáveis.  OBS funciona, Discord funciona,
+
+359
+00:14:44,240 --> 00:14:49,440
+navegadores da web obviamente funcionam, GIMP/PhoGIMP também
+
+360
+00:14:49,440 --> 00:14:52,160
+.  E quando finalmente consegui juntar todas essas peças
+
+361
+00:14:52,160 --> 00:14:57,360
+, comecei a perceber algo.   Na
+
+362
+00:14:57,360 --> 00:14:59,199
+verdade, a migração do fluxo de trabalho básico de criação de conteúdo para o Linux não foi tão difícil
+
+363
+00:14:59,199 --> 00:15:01,440
+.  A parte difícil foi lidar com os
+
+364
+00:15:01,440 --> 00:15:03,440
+poucos programas que estavam
+
+365
+00:15:03,440 --> 00:15:05,600
+especificamente vinculados ao Windows.  [música]
+
+366
+00:15:05,600 --> 00:15:08,079
+E essa distinção é realmente importante
+
+367
+00:15:08,079 --> 00:15:09,680
+porque, se você está pensando em migrar
+
+368
+00:15:09,680 --> 00:15:12,160
+para o Linux, não precisa necessariamente
+
+369
+00:15:12,160 --> 00:15:15,279
+perguntar: "Posso criar conteúdo no Linux?"
+
+370
+00:15:15,279 --> 00:15:18,000
+Você precisa se perguntar: posso executar meu
+
+371
+00:15:18,000 --> 00:15:21,199
+fluxo de trabalho específico de criação de conteúdo no Linux?
+
+372
+00:15:21,199 --> 00:15:23,680
+São duas questões muito diferentes.
+
+373
+00:15:23,680 --> 00:15:27,680
+Para mim, a resposta acabou sendo sim.
+
+374
+00:15:27,680 --> 00:15:29,519
+Precisei fazer algumas pequenas alterações ao longo do processo
+
+375
+00:15:29,519 --> 00:15:31,519
+.  E, honestamente, algumas dessas
+
+376
+00:15:31,519 --> 00:15:34,320
+mudanças nem foram ruins.  Pude experimentar um
+
+377
+00:15:34,320 --> 00:15:36,320
+software que não usava há anos.
+
+378
+00:15:36,320 --> 00:15:37,920
+Encontrei alternativas que eu não teria
+
+379
+00:15:37,920 --> 00:15:40,240
+considerado de outra forma.  E acabei
+
+380
+00:15:40,240 --> 00:15:42,639
+aprendendo muito mais sobre como meu próprio
+
+381
+00:15:42,639 --> 00:15:45,199
+fluxo de trabalho realmente funciona.  E nesse
+
+382
+00:15:45,199 --> 00:15:46,959
+ponto, comecei a sentir que,
+
+383
+00:15:46,959 --> 00:15:50,000
+ok, talvez eu realmente consiga fazer isso,
+
+384
+00:15:50,000 --> 00:15:52,480
+o que foi ótimo porque me restava apenas uma grande
+
+385
+00:15:52,480 --> 00:15:55,680
+dúvida.  Como os jogos
+
+386
+00:15:55,680 --> 00:16:01,920
+vão funcionar na prática?
+
+387
+00:16:01,920 --> 00:16:04,399
+Obviamente, os jogos eletrônicos foram uma
+
+388
+00:16:04,399 --> 00:16:06,720
+parte fundamental deste experimento.  Sou um streamer.
+
+389
+00:16:06,720 --> 00:16:09,199
+Eu jogo videogame constantemente.
+
+390
+00:16:09,199 --> 00:16:11,519
+Então, se eu mudasse para o Linux e de repente
+
+391
+00:16:11,519 --> 00:16:12,959
+não conseguisse jogar os jogos que eu queria
+
+392
+00:16:12,959 --> 00:16:15,680
+, isso meio que anularia o
+
+393
+00:16:15,680 --> 00:16:18,160
+propósito.  E, honestamente, os jogos [musicais] no
+
+394
+00:16:18,160 --> 00:16:20,399
+Linux têm sido muito bons.  Muitos
+
+395
+00:16:20,399 --> 00:16:22,000
+dos meus jogos funcionam através do Steam e do
+
+396
+00:16:22,000 --> 00:16:23,680
+Proton.
+
+397
+00:16:23,680 --> 00:16:25,920
+E depois que elas estão funcionando, eu
+
+398
+00:16:25,920 --> 00:16:27,839
+não sinto necessariamente que estou fazendo
+
+399
+00:16:27,839 --> 00:16:30,720
+algo diferente de quando usava o
+
+400
+00:16:30,720 --> 00:16:34,079
+Windows.  Mas houve uma coisa que
+
+401
+00:16:34,079 --> 00:16:37,839
+aprendi muito rapidamente.
+
+402
+00:16:37,839 --> 00:16:40,399
+Processamento de shaders Vulcan.  E se você é novo no mundo dos
+
+403
+00:16:40,399 --> 00:16:42,240
+jogos para Linux, essa é uma daquelas
+
+404
+00:16:42,240 --> 00:16:43,759
+coisas que podem te fazer pensar que seu
+
+405
+00:16:43,759 --> 00:16:46,240
+computador parou de funcionar completamente.   O
+
+406
+00:16:46,240 --> 00:16:48,079
+Steam pode levar algum tempo processando os
+
+407
+00:16:48,079 --> 00:16:49,920
+shaders Vulcan antes que você possa efetivamente
+
+408
+00:16:49,920 --> 00:16:52,480
+iniciar um jogo.  E se seus jogos estiverem
+
+409
+00:16:52,480 --> 00:16:55,600
+instalados em um disco rígido mecânico, nossa
+
+410
+00:16:55,600 --> 00:16:57,279
+, você pode muito bem ir fazer
+
+411
+00:16:57,279 --> 00:16:59,519
+um sanduíche,
+
+412
+00:16:59,519 --> 00:17:01,519
+porque vai ficar sentado olhando para o
+
+413
+00:17:01,519 --> 00:17:03,759
+Steam por 45 minutos a uma hora esperando
+
+414
+00:17:03,759 --> 00:17:06,160
+os shaders terminarem de processar.
+
+415
+00:17:06,160 --> 00:17:07,439
+E [na música], na primeira vez que isso aconteceu
+
+416
+00:17:07,439 --> 00:17:09,919
+comigo, eu basicamente fiquei sentado
+
+417
+00:17:09,919 --> 00:17:13,280
+pensando: "Ok, o Steam está fazendo alguma coisa ou está
+
+418
+00:17:13,280 --> 00:17:15,679
+apenas fingindo que está fazendo alguma coisa?"
+
+419
+00:17:15,679 --> 00:17:17,600
+Porque a barra de progresso se move quase tão
+
+420
+00:17:17,600 --> 00:17:19,520
+rápido quanto um caracol carregando uma
+
+421
+00:17:19,520 --> 00:17:22,400
+geladeira.  Por fim, descobri
+
+422
+00:17:22,400 --> 00:17:25,679
+que o Steam não estava necessariamente com defeito.
+
+423
+00:17:25,679 --> 00:17:27,919
+Estava processando shaders e meu pobre
+
+424
+00:17:27,919 --> 00:17:31,840
+HD mecânico não estava tendo boas
+
+425
+00:17:31,840 --> 00:17:34,640
+experiências.  E essa é, na verdade, uma das
+
+426
+00:17:34,640 --> 00:17:37,679
+razões pelas quais estou muito feliz por estar adquirindo um
+
+427
+00:17:37,679 --> 00:17:40,799
+SSD NVMe, porque executar jogos e
+
+428
+00:17:40,799 --> 00:17:44,559
+tarefas como essa em um SSD será
+
+429
+00:17:44,559 --> 00:17:46,559
+muito melhor do que exigir que um
+
+430
+00:17:46,559 --> 00:17:48,320
+disco rígido mecânico processe uma
+
+431
+00:17:48,320 --> 00:17:50,960
+montanha de dados de shaders.  Mas e quanto
+
+432
+00:17:50,960 --> 00:17:53,520
+aos jogos [musicais] propriamente ditos?  Assim que o jogo
+
+433
+00:17:53,520 --> 00:17:55,039
+começa, tudo volta ao
+
+434
+00:17:55,039 --> 00:17:57,520
+normal.  O Steam e o Proton tornaram
+
+435
+00:17:57,520 --> 00:17:59,360
+surpreendentemente fácil para mim jogar muitos
+
+436
+00:17:59,360 --> 00:18:01,280
+dos jogos que eu já gostava no
+
+437
+00:18:01,280 --> 00:18:03,760
+Windows, sem ter que ficar
+
+438
+00:18:03,760 --> 00:18:05,760
+pensando constantemente no fato de estar usando
+
+439
+00:18:05,760 --> 00:18:08,240
+Linux.  E esse é provavelmente um dos
+
+440
+00:18:08,240 --> 00:18:12,000
+maiores elogios que posso fazer.
+
+441
+00:18:12,000 --> 00:18:13,840
+Se eu estiver jogando e me
+
+442
+00:18:13,840 --> 00:18:16,240
+esquecer completamente de que estou usando Linux, isso é ótimo
+
+443
+00:18:16,240 --> 00:18:18,400
+.  Consegui jogar os jogos que
+
+444
+00:18:18,400 --> 00:18:20,799
+realmente quero transmitir, incluindo
+
+445
+00:18:20,799 --> 00:18:22,640
+Minecraft e outros jogos que fazem parte
+
+446
+00:18:22,640 --> 00:18:25,440
+da minha rotina normal de conteúdo.  E
+
+447
+00:18:25,440 --> 00:18:26,960
+isso [a música] é especialmente importante para
+
+448
+00:18:26,960 --> 00:18:28,480
+mim porque não tenho interesse em
+
+449
+00:18:28,480 --> 00:18:30,880
+trocar de sistema operacional só para
+
+450
+00:18:30,880 --> 00:18:32,559
+passar todo o meu tempo solucionando problemas em
+
+451
+00:18:32,559 --> 00:18:35,440
+jogos.  Quero poder clicar em "jogar",
+
+452
+00:18:35,440 --> 00:18:37,440
+esperar o jogo carregar e então
+
+453
+00:18:37,440 --> 00:18:39,280
+começar a gritar com qualquer
+
+454
+00:18:39,280 --> 00:18:41,360
+coisa horrível que esteja tentando me matar,
+
+455
+00:18:41,360 --> 00:18:43,679
+algo que, felizmente, o Linux me permite
+
+456
+00:18:43,679 --> 00:18:46,559
+fazer.  Mas o Minecraft com mods é um pouco
+
+457
+00:18:46,559 --> 00:18:48,880
+diferente.  O próprio Minecraft é
+
+458
+00:18:48,880 --> 00:18:51,440
+um ótimo exemplo disso.  Você
+
+459
+00:18:51,440 --> 00:18:54,240
+com certeza pode jogar Minecraft no Linux, mas
+
+460
+00:18:54,240 --> 00:18:56,080
+se você é alguém que joga Minecraft com mods
+
+461
+00:18:56,080 --> 00:18:58,480
+, eu recomendo fortemente que você
+
+462
+00:18:58,480 --> 00:19:00,080
+pesquise um pouco antes de
+
+463
+00:19:00,080 --> 00:19:02,640
+mudar, porque eu aprendi isso da
+
+464
+00:19:02,640 --> 00:19:05,120
+maneira mais chata.  Tentei instalar o Mod
+
+465
+00:19:05,120 --> 00:19:07,520
+Rint Launcher porque era o que eu
+
+466
+00:19:07,520 --> 00:19:09,440
+conhecia.  E embora eu conseguisse
+
+467
+00:19:09,440 --> 00:19:12,000
+iniciá-lo, ele continuava travando.  [música] E
+
+468
+00:19:12,000 --> 00:19:14,080
+naquele momento, eu já tinha gasto
+
+469
+00:19:14,080 --> 00:19:15,840
+tempo suficiente solucionando problemas de
+
+470
+00:19:15,840 --> 00:19:18,240
+software no Linux, então olhei para aquilo e pensei:
+
+471
+00:19:18,240 --> 00:19:21,200
+"Não, não vou fazer outra missão secundária de 3 a 4
+
+472
+00:19:21,200 --> 00:19:23,440
+horas". Então, fiz uma
+
+473
+00:19:23,440 --> 00:19:26,080
+pesquisa rápida no Google para ver o que outros
+
+474
+00:19:26,080 --> 00:19:28,559
+usuários de Linux estavam usando para Minecraft com mods.
+
+475
+00:19:28,559 --> 00:19:30,720
+E uma das respostas que eu continuava vendo era
+
+476
+00:19:30,720 --> 00:19:33,520
+Prism Launcher.  Então, resolvi tentar.
+
+477
+00:19:33,520 --> 00:19:35,679
+E, honestamente, até agora, tem sido muito
+
+478
+00:19:35,679 --> 00:19:38,880
+bom.  O Prism Launcher possui um banco de dados de mods
+
+479
+00:19:38,880 --> 00:19:40,559
+integrado, permitindo que você encontre
+
+480
+00:19:40,559 --> 00:19:42,799
+os mods que procura sem
+
+481
+00:19:42,799 --> 00:19:44,720
+precisar pesquisar
+
+482
+00:19:44,720 --> 00:19:47,440
+e instalar tudo manualmente.  Ainda estou
+
+483
+00:19:47,440 --> 00:19:50,480
+experimentando o Prism Launcher.  Então,
+
+484
+00:19:50,480 --> 00:19:52,480
+definitivamente ainda não descobri
+
+485
+00:19:52,480 --> 00:19:55,120
+tudo o que ele pode fazer, mas pelo que
+
+486
+00:19:55,120 --> 00:19:57,440
+usei até agora, é uma opção muito boa
+
+487
+00:19:57,440 --> 00:19:59,120
+se você usa Linux e quer
+
+488
+00:19:59,120 --> 00:20:01,520
+jogar Minecraft com mods.  Então, se o Minecraft com mods
+
+489
+00:20:01,520 --> 00:20:03,280
+é uma parte importante da sua
+
+490
+00:20:03,280 --> 00:20:05,760
+biblioteca de jogos, não se limite a verificar se o
+
+491
+00:20:05,760 --> 00:20:08,559
+Minecraft funciona no Linux.  [música] Verificar,
+
+492
+00:20:08,559 --> 00:20:10,799
+minha configuração de Minecraft com mods funciona no
+
+493
+00:20:10,799 --> 00:20:13,280
+Linux?  Porque essas podem ser duas
+
+494
+00:20:13,280 --> 00:20:16,320
+respostas muito diferentes.  Então, jogar no
+
+495
+00:20:16,320 --> 00:20:19,440
+Linux é perfeito?  Não. Definitivamente existem
+
+496
+00:20:19,440 --> 00:20:22,400
+jogos que exigem configuração adicional,
+
+497
+00:20:22,400 --> 00:20:25,120
+jogos com problemas de compatibilidade e
+
+498
+00:20:25,120 --> 00:20:26,720
+situações em que é necessário verificar
+
+499
+00:20:26,720 --> 00:20:29,039
+se um determinado jogo funciona corretamente
+
+500
+00:20:29,039 --> 00:20:31,760
+através do Proton.  Mas, comparado ao que eu
+
+501
+00:20:31,760 --> 00:20:34,320
+esperava quando fiz a mudança pela primeira vez, tem
+
+502
+00:20:34,320 --> 00:20:36,240
+sido muito melhor do que eu imaginava
+
+503
+00:20:36,240 --> 00:20:38,640
+.  E, honestamente, a maior
+
+504
+00:20:38,640 --> 00:20:40,720
+lição que aprendi é que jogar no Linux
+
+505
+00:20:40,720 --> 00:20:43,280
+não se resume necessariamente a fazer com que todos os
+
+506
+00:20:43,280 --> 00:20:45,600
+jogos funcionem.  Trata-se de descobrir
+
+507
+00:20:45,600 --> 00:20:48,320
+se os jogos que você joga funcionam.
+
+508
+00:20:48,320 --> 00:20:50,480
+Porque se toda a sua biblioteca consiste
+
+509
+00:20:50,480 --> 00:20:52,320
+em jogos que funcionam perfeitamente com o
+
+510
+00:20:52,320 --> 00:20:54,960
+Proton, você provavelmente terá uma
+
+511
+00:20:54,960 --> 00:20:56,720
+experiência muito diferente de alguém
+
+512
+00:20:56,720 --> 00:20:59,360
+cujo jogo favorito possui um antiche que
+
+513
+00:20:59,360 --> 00:21:02,320
+não funciona corretamente no Linux.  E isso é
+
+514
+00:21:02,320 --> 00:21:04,159
+algo que você definitivamente deve verificar
+
+515
+00:21:04,159 --> 00:21:10,799
+antes de dar o salto.
+
+516
+00:21:10,799 --> 00:21:12,880
+Então, depois de tudo o que eu falei,
+
+517
+00:21:12,880 --> 00:21:15,360
+você provavelmente está se perguntando: "Certo, do que
+
+518
+00:21:15,360 --> 00:21:17,919
+exatamente você sente falta do Windows?"  E,
+
+519
+00:21:17,919 --> 00:21:21,520
+honestamente, não muito.  Há algumas
+
+520
+00:21:21,520 --> 00:21:24,400
+coisas a considerar.  Uma das coisas mais importantes
+
+521
+00:21:24,400 --> 00:21:28,000
+para mim é provavelmente o TDR Nova.  O TDR
+
+522
+00:21:28,000 --> 00:21:30,320
+Nova é um plugin de áudio que eu uso para o
+
+523
+00:21:30,320 --> 00:21:33,120
+meu microfone no OBS, e tenho
+
+524
+00:21:33,120 --> 00:21:34,960
+usado basicamente desde que comecei a fazer
+
+525
+00:21:34,960 --> 00:21:37,679
+transmissões ao vivo.  Portanto, ter esse
+
+526
+00:21:37,679 --> 00:21:40,080
+plugin específico disponível foi uma parte bastante importante
+
+527
+00:21:40,080 --> 00:21:41,679
+da minha configuração de áudio no Windows [música]
+
+528
+00:21:41,679 --> 00:21:44,480
+.  Infelizmente, não encontrei
+
+529
+00:21:44,480 --> 00:21:46,720
+uma versão direta para Linux que se encaixe no meu
+
+530
+00:21:46,720 --> 00:21:49,520
+fluxo de trabalho com o OBS da mesma forma, mas
+
+531
+00:21:49,520 --> 00:21:52,559
+encontrei uma solução alternativa.  Em vez de deixar o OBS
+
+532
+00:21:52,559 --> 00:21:55,200
+processar os filtros do meu microfone, eu uso o
+
+533
+00:21:55,200 --> 00:21:57,600
+Easy Effects para processar o áudio do meu microfone no
+
+534
+00:21:57,600 --> 00:22:00,000
+nível do sistema operacional, antes
+
+535
+00:22:00,000 --> 00:22:03,115
+mesmo de o áudio chegar ao OBS.  E, honestamente,
+
+536
+00:22:03,115 --> 00:22:06,240
+[a música] funciona muito bem.  Mas
+
+537
+00:22:06,240 --> 00:22:09,600
+ainda sinto falta do TDR Nova.  É uma daquelas
+
+538
+00:22:09,600 --> 00:22:11,360
+coisas que eu uso há tanto tempo
+
+539
+00:22:11,360 --> 00:22:13,520
+que sei exatamente como quero que
+
+540
+00:22:13,520 --> 00:22:16,159
+soe, e ter que recriar essa configuração em
+
+541
+00:22:16,159 --> 00:22:18,080
+outro lugar simplesmente não é a
+
+542
+00:22:18,080 --> 00:22:20,880
+mesma coisa.  Então, se o TDR Nova algum dia tiver uma
+
+543
+00:22:20,880 --> 00:22:22,799
+versão compatível com Linux que funcione do jeito que eu
+
+544
+00:22:22,799 --> 00:22:24,640
+quero, eu estarei lá
+
+545
+00:22:24,640 --> 00:22:26,559
+imediatamente.  Outra coisa de que sinto
+
+546
+00:22:26,559 --> 00:22:29,520
+falta ocasionalmente é simplesmente não ter que
+
+547
+00:22:29,520 --> 00:22:32,159
+abrir o console.  Não me interpretem mal,
+
+548
+00:22:32,159 --> 00:22:34,480
+eu não odeio o terminal.  Na
+
+549
+00:22:34,480 --> 00:22:36,000
+verdade, me sinto muito mais à vontade
+
+550
+00:22:36,000 --> 00:22:38,559
+usando o Linux desde que mudei para ele, mas
+
+551
+00:22:38,559 --> 00:22:40,240
+às vezes eu só quero instalar
+
+552
+00:22:40,240 --> 00:22:42,880
+alguma coisa.  Não quero ter que abrir o
+
+553
+00:22:42,880 --> 00:22:45,039
+console, encontrar o comando, colar o
+
+554
+00:22:45,039 --> 00:22:47,520
+comando, executar o comando, ler a
+
+555
+00:22:47,520 --> 00:22:49,919
+saída e ficar me perguntando se acabei de
+
+556
+00:22:49,919 --> 00:22:52,880
+quebrar alguma coisa sem querer.  Se um programa tiver um
+
+557
+00:22:52,880 --> 00:22:56,000
+executável ou uma imagem de aplicativo, ótimo.  Clique em
+
+558
+00:22:56,000 --> 00:22:56,880
+baixar, [música]
+
+559
+00:22:56,880 --> 00:22:59,280
+execute.  Se for preciso abrir um
+
+560
+00:22:59,280 --> 00:23:01,840
+terminal e começar a digitar comandos, eu farei
+
+561
+00:23:01,840 --> 00:23:03,760
+isso.
+
+562
+00:23:03,760 --> 00:23:06,240
+Primeiro, vou reclamar disso.  E, sinceramente, é só isso.
+
+563
+00:23:06,240 --> 00:23:07,600
+Não há muitas coisas do
+
+564
+00:23:07,600 --> 00:23:09,520
+Windows de que eu realmente sinta
+
+565
+00:23:09,520 --> 00:23:10,480
+falta.  [música]
+
+566
+00:23:10,480 --> 00:23:12,480
+Definitivamente, existem coisas que são
+
+567
+00:23:12,480 --> 00:23:14,720
+diferentes.  Há coisas que exigem
+
+568
+00:23:14,720 --> 00:23:17,280
+mais trabalho e há coisas em que preciso
+
+569
+00:23:17,280 --> 00:23:20,159
+adaptar meu fluxo de trabalho.  E eu não
+
+570
+00:23:20,159 --> 00:23:21,600
+passei a última semana [musical] sentado aqui
+
+571
+00:23:21,600 --> 00:23:24,000
+pensando: "Meu Deus, como eu queria ter o
+
+572
+00:23:24,000 --> 00:23:26,400
+Windows de volta."  Na verdade, tem sido exatamente
+
+573
+00:23:26,400 --> 00:23:28,799
+o oposto.  Me adaptei ao
+
+574
+00:23:28,799 --> 00:23:30,559
+meu novo fluxo de trabalho surpreendentemente
+
+575
+00:23:30,559 --> 00:23:32,880
+rápido.  E essa é provavelmente a
+
+576
+00:23:32,880 --> 00:23:34,640
+coisa mais inesperada quando comecei
+
+577
+00:23:34,640 --> 00:23:41,280
+todo esse experimento.
+
+578
+00:23:41,280 --> 00:23:44,159
+Então, depois de tudo que mostrei a vocês,
+
+579
+00:23:44,159 --> 00:23:47,600
+eu voltaria a usar Linux?  Sinceramente,
+
+580
+00:23:47,600 --> 00:23:50,880
+sim, absolutamente.  E eu sei que passei boa parte
+
+581
+00:23:50,880 --> 00:23:52,240
+deste vídeo falando sobre
+
+582
+00:23:52,240 --> 00:23:54,720
+solução de problemas, soluções alternativas e alguma
+
+583
+00:23:54,720 --> 00:23:57,280
+missão paralela ocasional de 3 horas.  Mas,
+
+584
+00:23:57,280 --> 00:23:59,919
+apesar de tudo isso, eu
+
+585
+00:23:59,919 --> 00:24:02,000
+gosto muito de usar o Linux.  [música] Uma das
+
+586
+00:24:02,000 --> 00:24:04,480
+coisas que mais gosto é o
+
+587
+00:24:04,480 --> 00:24:07,120
+controle que tenho sobre o meu sistema operacional.
+
+588
+00:24:07,120 --> 00:24:09,200
+Posso alterar configurações na minha área de trabalho e no
+
+589
+00:24:09,200 --> 00:24:11,440
+sistema sem precisar
+
+590
+00:24:11,440 --> 00:24:13,679
+modificar toda a instalação do sistema operacional
+
+591
+00:24:13,679 --> 00:24:16,320
+para que ele se comporte da
+
+592
+00:24:16,320 --> 00:24:18,480
+maneira que eu quero.  E [na música] também
+
+593
+00:24:18,480 --> 00:24:20,640
+notei algo que, sinceramente, não
+
+594
+00:24:20,640 --> 00:24:23,279
+esperava.  Meu computador simplesmente parece
+
+595
+00:24:23,279 --> 00:24:25,679
+funcionar melhor para as tarefas que eu realmente
+
+596
+00:24:25,679 --> 00:24:28,960
+realizo.  Quando estou transmitindo conteúdo ao vivo, editando vídeos,
+
+597
+00:24:28,960 --> 00:24:31,360
+editando fotos ou jogando,
+
+598
+00:24:31,360 --> 00:24:33,120
+notei um desempenho melhor em comparação com
+
+599
+00:24:33,120 --> 00:24:35,440
+o que eu tinha no Windows.  Parte disso
+
+600
+00:24:35,440 --> 00:24:37,360
+, pelo menos na minha perspectiva, é
+
+601
+00:24:37,360 --> 00:24:38,960
+que eu não tenho o Windows executando um
+
+602
+00:24:38,960 --> 00:24:41,279
+monte de processos em segundo plano que eu
+
+603
+00:24:41,279 --> 00:24:43,360
+não preciso necessariamente enquanto estou tentando transmitir
+
+604
+00:24:43,360 --> 00:24:45,520
+conteúdo ou jogar.  Uma das
+
+605
+00:24:45,520 --> 00:24:47,520
+coisas mais importantes para mim é poder usar meu
+
+606
+00:24:47,520 --> 00:24:49,679
+modelo de VTuber enquanto jogo jogos como
+
+607
+00:24:49,679 --> 00:24:52,159
+Hell Divers.  Isso é muito importante
+
+608
+00:24:52,159 --> 00:24:55,039
+para mim.  Poder transmitir um jogo
+
+609
+00:24:55,039 --> 00:24:56,799
+enquanto meu modelo está funcionando,
+
+610
+00:24:56,799 --> 00:24:58,720
+sem ter a sensação de que meu sistema está em
+
+611
+00:24:58,720 --> 00:25:01,760
+conflito consigo mesmo, é exatamente o tipo de
+
+612
+00:25:01,760 --> 00:25:04,159
+coisa que eu queria do Switch.  Isso
+
+613
+00:25:04,159 --> 00:25:06,640
+significa que eu acho que todos deveriam
+
+614
+00:25:06,640 --> 00:25:10,640
+migrar para o Linux?  Absolutamente não.
+
+615
+00:25:10,640 --> 00:25:13,120
+E eu realmente quero enfatizar isso.  Se
+
+616
+00:25:13,120 --> 00:25:14,960
+você é um VTuber e está pensando em
+
+617
+00:25:14,960 --> 00:25:17,360
+mudar, eu só recomendaria se
+
+618
+00:25:17,360 --> 00:25:18,320
+você se sentir confortável com a
+
+619
+00:25:18,320 --> 00:25:20,640
+solução de problemas, o uso da linha de comando
+
+620
+00:25:20,640 --> 00:25:22,559
+e a busca por soluções alternativas quando algo
+
+621
+00:25:22,559 --> 00:25:25,120
+não funcionar como esperado.  Porque,
+
+622
+00:25:25,120 --> 00:25:26,799
+embora muitas coisas funcionem perfeitamente
+
+623
+00:25:26,799 --> 00:25:29,279
+bem assim que são instaladas, nem tudo
+
+624
+00:25:29,279 --> 00:25:31,520
+funciona dessa forma.  E se você é o tipo de pessoa
+
+625
+00:25:31,520 --> 00:25:34,480
+que quer instalar um programa, clicar
+
+626
+00:25:34,480 --> 00:25:36,880
+no botão e que ele funcione exatamente da mesma
+
+627
+00:25:36,880 --> 00:25:39,919
+forma que funcionava no Windows, o Linux pode
+
+628
+00:25:39,919 --> 00:25:41,919
+te frustrar [música].  Antes de
+
+629
+00:25:41,919 --> 00:25:44,080
+mudar, recomendo que faça uma lista
+
+630
+00:25:44,080 --> 00:25:46,159
+dos softwares que você realmente usa todos os
+
+631
+00:25:46,159 --> 00:25:48,320
+dias e verifique-a.  Existe uma
+
+632
+00:25:48,320 --> 00:25:51,760
+versão nativa para Linux?  Caso contrário, posso executar
+
+633
+00:25:51,760 --> 00:25:52,960
+a versão para Windows através de uma
+
+634
+00:25:52,960 --> 00:25:54,640
+camada de compatibilidade ou outra
+
+635
+00:25:54,640 --> 00:25:57,600
+solução alternativa?  E se isso não funcionar,
+
+636
+00:25:57,600 --> 00:25:59,520
+existe alguma alternativa nativa do Linux que
+
+637
+00:25:59,520 --> 00:26:02,080
+possa fazer a mesma coisa?  Essa pesquisa é
+
+638
+00:26:02,080 --> 00:26:03,760
+provavelmente a coisa mais importante que você
+
+639
+00:26:03,760 --> 00:26:06,320
+pode fazer antes de formatar o Windows,
+
+640
+00:26:06,320 --> 00:26:08,400
+porque minha experiência com Linux
+
+641
+00:26:08,400 --> 00:26:11,520
+me mostrou isso.  Posso usar o software no
+
+642
+00:26:11,520 --> 00:26:13,039
+Linux?
+
+643
+00:26:13,039 --> 00:26:15,120
+Nem sempre é uma pergunta de sim ou não.
+
+644
+00:26:15,120 --> 00:26:18,880
+Às vezes a resposta é sim.  Mas você vai ter que
+
+645
+00:26:18,880 --> 00:26:20,720
+descobrir algumas coisas.
+
+646
+00:26:20,720 --> 00:26:23,520
+E, sinceramente, não me incomoda.  Então,
+
+647
+00:26:23,520 --> 00:26:25,600
+por que estou ficando?  Após apenas uma
+
+648
+00:26:25,600 --> 00:26:28,159
+semana usando Nara, já estou bastante
+
+649
+00:26:28,159 --> 00:26:30,720
+confiante de que vou continuar usando.  Eu
+
+650
+00:26:30,720 --> 00:26:32,559
+gosto muito da interface.  Gosto do nível de
+
+651
+00:26:32,559 --> 00:26:35,520
+controle que tenho sobre o meu sistema.
+
+652
+00:26:35,520 --> 00:26:37,840
+Gosto que o Nabara tenha sido projetado pensando em jogos
+
+653
+00:26:37,840 --> 00:26:40,720
+e criação de conteúdo, e
+
+654
+00:26:40,720 --> 00:26:42,720
+aprecio muito que muitas das
+
+655
+00:26:42,720 --> 00:26:44,799
+coisas de que eu precisava já estivessem disponíveis
+
+656
+00:26:44,799 --> 00:26:47,440
+ou configuradas, sem que eu precisasse gastar um
+
+657
+00:26:47,440 --> 00:26:49,200
+dia inteiro configurando o
+
+658
+00:26:49,200 --> 00:26:51,120
+sistema operacional.  Já passei por alguns
+
+659
+00:26:51,120 --> 00:26:53,039
+momentos frustrantes.  Já tive alguns momentos muito estúpidos
+
+660
+00:26:53,039 --> 00:26:55,120
+.  Com certeza já fiquei encarando a
+
+661
+00:26:55,120 --> 00:26:56,799
+janela de um terminal me perguntando o que diabos
+
+662
+00:26:56,799 --> 00:26:59,360
+eu estava fazendo.  Mas também aprendi uma
+
+663
+00:26:59,360 --> 00:27:01,679
+quantidade absurda de coisas sobre o meu próprio computador
+
+664
+00:27:01,679 --> 00:27:04,320
+e como meu fluxo de trabalho realmente funciona.  E
+
+665
+00:27:04,320 --> 00:27:05,840
+acho que essa é provavelmente a principal
+
+666
+00:27:05,840 --> 00:27:08,080
+razão pela qual estou ficando.  O Linux não tornou meu
+
+667
+00:27:08,080 --> 00:27:10,720
+fluxo de trabalho impossível.  Isso me fez
+
+668
+00:27:10,720 --> 00:27:13,279
+repensar a maneira como faço algumas coisas.  E depois de
+
+669
+00:27:13,279 --> 00:27:15,520
+tudo que passei, na verdade,
+
+670
+00:27:15,520 --> 00:27:18,240
+prefiro assim.  Então, é possível ser um VTuber no
+
+671
+00:27:18,240 --> 00:27:21,440
+Linux?  Sim.  [música] Você pode fazer streaming?
+
+672
+00:27:21,440 --> 00:27:25,200
+Sim.  Você sabe editar vídeos?  Absolutamente.
+
+673
+00:27:25,200 --> 00:27:27,679
+Você consegue jogar jogos na maior parte do tempo?   Sim
+
+674
+00:27:27,679 --> 00:27:29,760
+.  Tudo funcionará exatamente
+
+675
+00:27:29,760 --> 00:27:33,120
+como funcionava no Windows?  Provavelmente não.  Mas
+
+676
+00:27:33,120 --> 00:27:34,799
+se você estiver disposto a solucionar problemas,
+
+677
+00:27:34,799 --> 00:27:37,279
+experimentar e, ocasionalmente, embarcar em uma
+
+678
+00:27:37,279 --> 00:27:39,440
+missão paralela de 3 horas porque seu software
+
+679
+00:27:39,440 --> 00:27:42,080
+decidiu se tornar seu inimigo mortal,
+
+680
+00:27:42,080 --> 00:27:44,960
+eu diria que vale a pena tentar.  Sou Aloe, uma
+
+681
+00:27:44,960 --> 00:27:47,840
+VTuber, e aparentemente agora sou usuária de Linux
+
+682
+00:27:47,840 --> 00:27:52,600
+.  Obrigado por assistir.

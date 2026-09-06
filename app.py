@@ -75,15 +75,39 @@ def get_estado_sincronizado():
         estado_global["status"] = "pausado"
         estado_global["tempo_atual"] = 0
         
+    # INSERÇÃO: Varre os itens da lista e injeta o status de download da legenda
+    for video in playlist:
+        v_id = video.get("id")
+        if v_id:
+            if os.path.exists(f"legenda_{v_id}.srt"):
+                video["status_legenda"] = "Pronto"
+            else:
+                video["status_legenda"] = "Baixando Legendas"
+        
     return jsonify({
         "id": estado_global["video_atual_id"],
         "status": estado_global["status"],
         "tempo": estado_global["tempo_atual"],
         "velocidade": estado_global.get("velocidade", 1.0),
-        "cc": estado_global.get("cc", 0),       # <--- Enviado para o OBS
-        "lang": estado_global.get("lang", "pt"), # <--- Enviado para o OBS
-        "lista_completa": playlist
+        "cc": estado_global.get("cc", 0),       
+        "lang": estado_global.get("lang", "pt"), 
+        "lista_completa": playlist  # <--- Enviado com os novos selos
     })
+
+@app.route('/api/log_erros_legendas')
+def api_log_erros_legendas():
+    LOG_FILE = "legendas.log"
+    erros = []
+    if os.path.exists(LOG_FILE):
+        try:
+            with open(LOG_FILE, "r", encoding="utf-8") as f:
+                linhas = f.readlines()
+                for linha in linhas:
+                    if "⚠️ Alerta" in linha or "expurgado" in linha:
+                        erros.append(linha.strip())
+        except Exception:
+            pass
+    return jsonify(erros[-10:])
 
 @app.route('/api/adicionar', methods=['POST'])
 def adicionar():

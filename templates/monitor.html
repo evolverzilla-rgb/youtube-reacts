@@ -81,6 +81,7 @@
     <script>
         let player = null;
         let videoIdAtivo = null;
+        let velocidadeGlobalMonitor = 1.0;
         let apiPronta = false;
         let monitorAtivado = false;
 
@@ -105,12 +106,13 @@
             setInterval(sincronizarComPython, 1000);
         }
 
+
         async function sincronizarComPython() {
             if (!apiPronta || !monitorAtivado) return;
             try {
-                const res = await fetch('/api/estado_sincronizado');
+                // Inserção da velocidade na URL do fetch
+                const res = await fetch('/api/estado_sincronizado?velocidade=' + velocidadeGlobalMonitor);
                 const dados = await res.json();
-
                 // Se o arquivo JSON estiver vazio, exibe o texto de alerta em tela
                 if (!dados.id) {
                     if (player && typeof player.stopVideo === 'function') player.stopVideo();
@@ -128,12 +130,17 @@
                         player = new YT.Player('player', {
                             height: '100%', width: '100%', videoId: dados.id,
                             playerVars: { 'autoplay': 1, 'controls': 1, 'rel': 0 },
-                            events: { 'onStateChange': onPlayerStateChange }
+                            events: { 
+                                'onStateChange': onPlayerStateChange,
+                                // INSERÇÃO AQUI: Captura quando você clica na velocidade no tablet
+                                'onPlaybackRateChange': function(e) { velocidadeGlobalMonitor = e.data; }
+                            }
                         });
                     } else if (typeof player.loadVideoById === 'function') {
                         player.loadVideoById({ videoId: dados.id });
                     }
                 }
+
 
                 if (player && typeof player.getPlayerState === 'function') {
                     const state = player.getPlayerState();

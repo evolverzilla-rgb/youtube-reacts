@@ -170,5 +170,10 @@ def streamdeck_toggle():
         salvar_playlist(playlist)
     return jsonify({"status": estado_global["status"]})
 
+# --- INSERÇÃO DA SUB-ROTINA DO GERENCIADOR DE LEGENDAS ---
+from gerenciador_legendas import iniciar_servico_legendas
+iniciar_servico_legendas()
+# ---------------------------------------------------------
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050, debug=True)

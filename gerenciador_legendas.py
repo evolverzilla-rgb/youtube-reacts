@@ -8,7 +8,7 @@ import re
 from json2srt import json_to_srt
 
 # Mantendo o mesmo nome exato do arquivo do seu repositório
-PLAYLIST_FILE = "dados_playilst.json"
+PLAYLIST_FILE = "dados_playlist.json"
 LOG_FILE = "legendas.log"
 
 def gravar_no_log(mensagem):
@@ -99,8 +99,9 @@ def thread_varredura_legendas():
                 rota_watch = "/watch?v="
                 url_completa = dominio_yt + rota_watch + video_id
                 
-                arquivo_saida_template = f"legenda_{video_id}.%(ext)s"
+                arquivo_saida_template = f"legenda_{video_id}.json3"
                 
+
                 comando = [
                     "yt-dlp",
                     "--write-auto-sub",

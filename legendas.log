@@ -6,3 +6,413 @@
 [2026-09-06 16:27:24] Serviço de varredura em segundo plano INICIADO com sucesso.
 [2026-09-06 16:27:51] Serviço de varredura em segundo plano INICIADO com sucesso.
 [2026-09-06 16:27:51] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:33:24] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:33:24] Auditoria AVISO: O arquivo [dados_playilst.json] NÃO existe na pasta atual. Um novo será monitorado.
+[2026-09-06 16:33:24] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:24] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:33:25] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:33:25] Auditoria AVISO: O arquivo [dados_playilst.json] NÃO existe na pasta atual. Um novo será monitorado.
+[2026-09-06 16:33:25] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:25] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:33:29] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:29] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:33:30] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:30] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:33:34] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:34] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:33:35] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:33:35] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 0
+[2026-09-06 16:38:14] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:38:14] Auditoria: O arquivo [dados_playlist.json] foi localizado com sucesso no disco.
+[2026-09-06 16:38:14] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:14] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:14] Legenda não existe para o vídeo <uR9niEOSY3Y>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:14] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_uR9niEOSY3Y.%(ext)s https://youtube.com/watch?v=uR9niEOSY3Y
+[2026-09-06 16:38:14] Executando download do metadado JSON3 para uR9niEOSY3Y...
+[2026-09-06 16:38:14] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:38:14] Auditoria: O arquivo [dados_playlist.json] foi localizado com sucesso no disco.
+[2026-09-06 16:38:14] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:14] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:14] Legenda não existe para o vídeo <uR9niEOSY3Y>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:14] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_uR9niEOSY3Y.%(ext)s https://youtube.com/watch?v=uR9niEOSY3Y
+[2026-09-06 16:38:14] Executando download do metadado JSON3 para uR9niEOSY3Y...
+[youtube] Extracting URL: https://youtube.com/watch?v=uR9niEOSY3Y
+[youtube] uR9niEOSY3Y: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=uR9niEOSY3Y
+[youtube] uR9niEOSY3Y: Downloading webpage
+WARNING: [youtube] uR9niEOSY3Y: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:16] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo uR9niEOSY3Y pós-download.
+WARNING: [youtube] uR9niEOSY3Y: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:16] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo uR9niEOSY3Y pós-download.
+[2026-09-06 16:38:21] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:21] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:21] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:21] Legenda não existe para o vídeo <mfyIJMaURXA>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:21] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_mfyIJMaURXA.%(ext)s https://youtube.com/watch?v=mfyIJMaURXA
+[2026-09-06 16:38:21] Executando download do metadado JSON3 para mfyIJMaURXA...
+[2026-09-06 16:38:21] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:21] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:21] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:21] Legenda não existe para o vídeo <mfyIJMaURXA>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:21] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_mfyIJMaURXA.%(ext)s https://youtube.com/watch?v=mfyIJMaURXA
+[2026-09-06 16:38:21] Executando download do metadado JSON3 para mfyIJMaURXA...
+[youtube] Extracting URL: https://youtube.com/watch?v=mfyIJMaURXA
+[youtube] mfyIJMaURXA: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=mfyIJMaURXA
+[youtube] mfyIJMaURXA: Downloading webpage
+WARNING: [youtube] mfyIJMaURXA: There are missing subtitles languages because a PO token was not provided. Subtitles for these languages are missing: en. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: [youtube] mfyIJMaURXA: There are missing subtitles languages because a PO token was not provided. Subtitles for these languages are missing: en. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:23] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo mfyIJMaURXA pós-download.
+[2026-09-06 16:38:23] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo mfyIJMaURXA pós-download.
+[2026-09-06 16:38:28] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:28] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:28] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:28] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:28] Legenda não existe para o vídeo <1cmmAZjG3gE>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:28] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_1cmmAZjG3gE.%(ext)s https://youtube.com/watch?v=1cmmAZjG3gE
+[2026-09-06 16:38:28] Executando download do metadado JSON3 para 1cmmAZjG3gE...
+[2026-09-06 16:38:28] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:28] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:28] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:28] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:28] Legenda não existe para o vídeo <1cmmAZjG3gE>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:28] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_1cmmAZjG3gE.%(ext)s https://youtube.com/watch?v=1cmmAZjG3gE
+[2026-09-06 16:38:28] Executando download do metadado JSON3 para 1cmmAZjG3gE...
+[youtube] Extracting URL: https://youtube.com/watch?v=1cmmAZjG3gE
+[youtube] 1cmmAZjG3gE: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=1cmmAZjG3gE
+[youtube] 1cmmAZjG3gE: Downloading webpage
+WARNING: [youtube] 1cmmAZjG3gE: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:30] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo 1cmmAZjG3gE pós-download.
+WARNING: [youtube] 1cmmAZjG3gE: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:30] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo 1cmmAZjG3gE pós-download.
+[2026-09-06 16:38:35] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:35] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:35] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] Legenda não existe para o vídeo <QKxqvS1UBFg>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:35] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_QKxqvS1UBFg.%(ext)s https://youtube.com/watch?v=QKxqvS1UBFg
+[2026-09-06 16:38:35] Executando download do metadado JSON3 para QKxqvS1UBFg...
+[youtube] Extracting URL: https://youtube.com/watch?v=QKxqvS1UBFg
+[youtube] QKxqvS1UBFg: Downloading webpage
+[2026-09-06 16:38:35] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:35] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:35] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:35] Legenda não existe para o vídeo <QKxqvS1UBFg>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:35] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_QKxqvS1UBFg.%(ext)s https://youtube.com/watch?v=QKxqvS1UBFg
+[2026-09-06 16:38:35] Executando download do metadado JSON3 para QKxqvS1UBFg...
+[youtube] Extracting URL: https://youtube.com/watch?v=QKxqvS1UBFg
+[youtube] QKxqvS1UBFg: Downloading webpage
+WARNING: [youtube] QKxqvS1UBFg: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:37] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo QKxqvS1UBFg pós-download.
+WARNING: [youtube] QKxqvS1UBFg: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:37] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo QKxqvS1UBFg pós-download.
+[2026-09-06 16:38:42] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:42] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:42] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] Legenda não existe para o vídeo <U5VbgzXbX9I>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:42] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_U5VbgzXbX9I.%(ext)s https://youtube.com/watch?v=U5VbgzXbX9I
+[2026-09-06 16:38:42] Executando download do metadado JSON3 para U5VbgzXbX9I...
+[2026-09-06 16:38:42] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:42] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:42] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:42] Legenda não existe para o vídeo <U5VbgzXbX9I>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:42] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_U5VbgzXbX9I.%(ext)s https://youtube.com/watch?v=U5VbgzXbX9I
+[2026-09-06 16:38:42] Executando download do metadado JSON3 para U5VbgzXbX9I...
+[youtube] Extracting URL: https://youtube.com/watch?v=U5VbgzXbX9I
+[youtube] U5VbgzXbX9I: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=U5VbgzXbX9I
+[youtube] U5VbgzXbX9I: Downloading webpage
+WARNING: [youtube] U5VbgzXbX9I: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:44] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo U5VbgzXbX9I pós-download.
+WARNING: [youtube] U5VbgzXbX9I: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:44] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo U5VbgzXbX9I pós-download.
+[2026-09-06 16:38:49] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:49] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:49] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] Legenda não existe para o vídeo <kzeD66tb3Ts>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:49] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_kzeD66tb3Ts.%(ext)s https://youtube.com/watch?v=kzeD66tb3Ts
+[2026-09-06 16:38:49] Executando download do metadado JSON3 para kzeD66tb3Ts...
+[2026-09-06 16:38:49] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:49] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:49] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:49] Legenda não existe para o vídeo <kzeD66tb3Ts>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:49] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_kzeD66tb3Ts.%(ext)s https://youtube.com/watch?v=kzeD66tb3Ts
+[2026-09-06 16:38:49] Executando download do metadado JSON3 para kzeD66tb3Ts...
+[youtube] Extracting URL: https://youtube.com/watch?v=kzeD66tb3Ts
+[youtube] kzeD66tb3Ts: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=kzeD66tb3Ts
+[youtube] kzeD66tb3Ts: Downloading webpage
+WARNING: [youtube] Join this channel to get access to members-only content like this video, and other exclusive perks.
+WARNING: No video formats found!
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+WARNING: [youtube] Join this channel to get access to members-only content like this video, and other exclusive perks.
+[2026-09-06 16:38:50] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo kzeD66tb3Ts pós-download.
+WARNING: No video formats found!
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:50] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo kzeD66tb3Ts pós-download.
+[2026-09-06 16:38:55] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:55] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:55] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] Legenda não existe para o vídeo <UxPL0xiYOZ4>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:55] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_UxPL0xiYOZ4.%(ext)s https://youtube.com/watch?v=UxPL0xiYOZ4
+[2026-09-06 16:38:55] Executando download do metadado JSON3 para UxPL0xiYOZ4...
+[2026-09-06 16:38:55] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:38:55] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:38:55] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:38:55] Legenda não existe para o vídeo <UxPL0xiYOZ4>, iniciando os preparativos para baixar.
+[2026-09-06 16:38:55] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_UxPL0xiYOZ4.%(ext)s https://youtube.com/watch?v=UxPL0xiYOZ4
+[2026-09-06 16:38:55] Executando download do metadado JSON3 para UxPL0xiYOZ4...
+[youtube] Extracting URL: https://youtube.com/watch?v=UxPL0xiYOZ4
+[youtube] UxPL0xiYOZ4: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=UxPL0xiYOZ4
+[youtube] UxPL0xiYOZ4: Downloading webpage
+WARNING: [youtube] UxPL0xiYOZ4: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:57] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo UxPL0xiYOZ4 pós-download.
+WARNING: [youtube] UxPL0xiYOZ4: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:38:57] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo UxPL0xiYOZ4 pós-download.
+[2026-09-06 16:39:02] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:02] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:02] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:02] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:02] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:02] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:07] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:07] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:07] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:07] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:07] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:12] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:12] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:12] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:12] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:12] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:17] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:17] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:17] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:17] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:17] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:22] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:22] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:22] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:22] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:22] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:27] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:27] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:27] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:27] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:27] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:32] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:32] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:39:32] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:39:32] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <mfyIJMaURXA> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <1cmmAZjG3gE> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <QKxqvS1UBFg> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <U5VbgzXbX9I> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <kzeD66tb3Ts> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:39:32] O vídeo <UxPL0xiYOZ4> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:49:26] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:49:26] Auditoria: O arquivo [dados_playlist.json] foi localizado com sucesso no disco.
+[2026-09-06 16:49:26] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:49:26] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:49:26] Legenda não existe para o vídeo <uR9niEOSY3Y>, iniciando os preparativos para baixar.
+[2026-09-06 16:49:26] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_uR9niEOSY3Y.json3 https://youtube.com/watch?v=uR9niEOSY3Y
+[2026-09-06 16:49:26] Executando download do metadado JSON3 para uR9niEOSY3Y...
+[2026-09-06 16:49:26] Serviço de varredura em segundo plano INICIADO com sucesso.
+[2026-09-06 16:49:26] Auditoria: O arquivo [dados_playlist.json] foi localizado com sucesso no disco.
+[2026-09-06 16:49:26] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:49:26] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:49:26] Legenda não existe para o vídeo <uR9niEOSY3Y>, iniciando os preparativos para baixar.
+[2026-09-06 16:49:26] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_uR9niEOSY3Y.json3 https://youtube.com/watch?v=uR9niEOSY3Y
+[2026-09-06 16:49:26] Executando download do metadado JSON3 para uR9niEOSY3Y...
+[youtube] Extracting URL: https://youtube.com/watch?v=uR9niEOSY3Y
+[youtube] uR9niEOSY3Y: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=uR9niEOSY3Y
+[youtube] uR9niEOSY3Y: Downloading webpage
+WARNING: [youtube] uR9niEOSY3Y: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: [youtube] uR9niEOSY3Y: There are missing subtitles languages because a PO token was not provided. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:49:28] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo uR9niEOSY3Y pós-download.
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:49:28] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo uR9niEOSY3Y pós-download.
+[2026-09-06 16:49:33] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:49:33] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:49:33] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:49:33] Legenda não existe para o vídeo <mfyIJMaURXA>, iniciando os preparativos para baixar.
+[2026-09-06 16:49:33] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_mfyIJMaURXA.json3 https://youtube.com/watch?v=mfyIJMaURXA
+[2026-09-06 16:49:33] Executando download do metadado JSON3 para mfyIJMaURXA...
+[2026-09-06 16:49:33] --- Nova varredura cíclica da fila iniciada ---
+[2026-09-06 16:49:33] Varredura: Fila lida com sucesso. Total de vídeos encontrados: 7
+[2026-09-06 16:49:33] O vídeo <uR9niEOSY3Y> já falhou anteriormente nesta sessão, pulando para evitar travamento.
+[2026-09-06 16:49:33] Legenda não existe para o vídeo <mfyIJMaURXA>, iniciando os preparativos para baixar.
+[2026-09-06 16:49:33] Invocando o terminal. Comando executado: yt-dlp --write-auto-sub --sub-lang pt.* --sub-format json3 --skip-download --ignore-no-formats-error --extractor-args youtube:player_client=web --sleep-subtitles 60 -o legenda_mfyIJMaURXA.json3 https://youtube.com/watch?v=mfyIJMaURXA
+[2026-09-06 16:49:33] Executando download do metadado JSON3 para mfyIJMaURXA...
+[youtube] Extracting URL: https://youtube.com/watch?v=mfyIJMaURXA
+[youtube] mfyIJMaURXA: Downloading webpage
+[youtube] Extracting URL: https://youtube.com/watch?v=mfyIJMaURXA
+[youtube] mfyIJMaURXA: Downloading webpage
+WARNING: [youtube] mfyIJMaURXA: There are missing subtitles languages because a PO token was not provided. Subtitles for these languages are missing: en. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: [youtube] mfyIJMaURXA: There are missing subtitles languages because a PO token was not provided. Subtitles for these languages are missing: en. Automatic captions for 1 languages are missing.
+WARNING: Only images are available for download. use --list-formats to see them
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+WARNING: Requested format is not available
+[info] There are no subtitles for the requested languages
+[2026-09-06 16:49:35] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo mfyIJMaURXA pós-download.
+[2026-09-06 16:49:35] Erro: O arquivo JSON3 não foi encontrado na pasta para o vídeo mfyIJMaURXA pós-download.

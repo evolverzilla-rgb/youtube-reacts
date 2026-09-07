@@ -1,3 +1,4 @@
+import re
 import os
 import json
 import yt_dlp
@@ -193,6 +194,62 @@ def streamdeck_toggle():
             playlist[0]['status'] = 'tocando'
         salvar_playlist(playlist)
     return jsonify({"status": estado_global["status"]})
+
+# --- ROTA DE EXTRAÇÃO DE SRT PARA O OBS CORRIGIDA ---
+@app.route('/api/legendas_sincronizadas')
+def api_legendas_sincronizadas():
+    video_id = request.args.get('id')
+    if not video_id:
+        return jsonify([])
+        
+    arquivo_srt = f"legenda_{video_id}.srt"
+    linhas_legendas = []
+    
+    if os.path.exists(arquivo_srt):
+        try:
+            with open(arquivo_srt, "r", encoding="utf-8") as f:
+                conteudo = f.read()
+                blocos = conteudo.strip().split('\n\n')
+                
+                for bloco in blocos:
+                    partes_bloco = bloco.split('\n')
+                    if len(partes_bloco) >= 3:
+                        # Identifica a linha do tempo (segunda linha do bloco SRT)
+                        linha_tempo = partes_bloco[1]
+                        tempos = linha_tempo.split(' --> ')
+                        
+                        if len(tempos) == 2:
+                            # Função interna estável para converter HH:MM:SS,mmm para segundos
+                            def srt_para_segundos(t_str):
+                                try:
+                                    t_str = t_str.replace(',', '.').strip()
+                                    p = t_str.split(':')
+                                    h = float(p[0])
+                                    m = float(p[1])
+                                    s = float(p[2])
+                                    return (h * 3600) + (m * 60) + s
+                                except Exception:
+                                    return 0.0
+                                
+                            tempo_inicio = srt_para_segundos(tempos[0])
+                            tempo_fim = srt_para_segundos(tempos[1])
+                            
+                            # Une o texto (linhas 3 em diante)
+                            texto_linha = " ".join(partes_bloco[2:]).strip()
+                            texto_linha = re.sub(r'<[^>]*>', '', texto_linha)
+                            texto_linha = re.sub(r'\s+', ' ', texto_linha)
+                            
+                            if texto_linha:
+                                linhas_legendas.append({
+                                    "inicio": tempo_inicio,
+                                    "fim": tempo_fim,
+                                    "texto": texto_linha
+                                })
+        except Exception as err:
+            print(f"Erro ao processar arquivo SRT {arquivo_srt}: {err}")
+            
+    return jsonify(linhas_legendas)
+
 
 # --- INSERÇÃO DA SUB-ROTINA DO GERENCIADOR DE LEGENDAS ---
 from gerenciador_legendas import iniciar_servico_legendas

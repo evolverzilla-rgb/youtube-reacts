@@ -2,127 +2,118 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Monitor Mestre - vovozilla</title>
+    <title>Painel Unificado Estúdio - Monitor & Controle</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #111; display: flex; overflow: hidden; font-family: sans-serif; }
-        .lado-esquerdo { flex: 3; height: 100%; background: #000; position: relative; }
-        .lado-direito { flex: 1; display: flex; flex-direction: column; height: 100%; border-left: 2px solid #333; }
-        .chat-container { flex: 1; height: 50%; display: flex; flex-direction: column; }
-        .chat-titulo { background: #222; color: #fff; padding: 5px; font-size: 12px; text-transform: uppercase; font-weight: bold; text-align: center; }
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #121212; color: #e0e0e0; font-family: 'Segoe UI', -apple-system, sans-serif; overflow: hidden; }
+        .painel-estudio { display: flex; width: 100%; height: 100vh; box-sizing: border-box; padding: 10px; gap: 15px; }
+        .coluna-dock { flex: 1; min-width: 280px; max-width: 350px; background-color: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; box-sizing: border-box; }
+        .coluna-central { flex: 2.5; display: flex; flex-direction: column; gap: 15px; height: 100%; box-sizing: border-box; }
+        .bloco-video { flex: 1; background: #000; border-radius: 8px; overflow: hidden; border: 1px solid #333; position: relative; }
         #player { width: 100%; height: 100%; border: none; }
-        iframe { width: 100%; height: 100%; border: none; }
-
-        /* Tela de Interação Inicial */
-        #bloqueio-inicial {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: #1a1a1a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        .btn-despertar {
-            background-color: #53FC18;
-            color: #000000;
-            border: none;
-            padding: 20px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(83, 252, 24, 0.4);
-        }
-
-        /* Alerta de Fila Vazia */
-        #aviso-fila-vazia {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            color: #ff4444;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            display: none;
-            z-index: 500;
-        }
+        .bloco-botoes-controle { background-color: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 8px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; }
+        .coluna-chat { flex: 1; min-width: 250px; max-width: 320px; background-color: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; box-sizing: border-box; }
+        h3 { color: #ffffff; margin: 0 0 10px 0; font-size: 14px; border-bottom: 1px solid #333; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .container-inputs { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+        input[type="text"] { background-color: #2d2d2d; color: #ffffff; border: 1px solid #444; border-radius: 4px; padding: 8px 10px; width: 100%; box-sizing: border-box; font-size: 13px; }
+        .btn-add-fila { background-color: #007bff; color: #fff; width: 100%; padding: 8px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .rolagem-fila { flex: 1; overflow-y: auto; padding-right: 4px; }
+        .item-fila { background-color: #262626; border: 1px solid #3a3a3a; padding: 10px; margin-bottom: 8px; border-radius: 6px; }
+        .topo { border: 2px solid #53FC18; background-color: #1e291b; }
+        .titulo-video { font-size: 13px; font-weight: bold; color: #ffffff; display: block; margin-bottom: 3px; }
+        .meta-video { font-size: 11px; color: #aaaaaa; display: block; }
+        .botoes-inline { display: flex; gap: 6px; margin-top: 6px; }
+        .btn-mover-proximo { background-color: #17a2b8; color: #fff; padding: 5px 10px; border-radius: 4px; border: none; font-size: 11px; font-weight: 600; cursor: pointer; }
+        .btn-remove { background-color: #dc3545; color: #fff; margin-left: auto; padding: 5px 10px; border-radius: 4px; border: none; font-size: 11px; font-weight: 600; cursor: pointer; }
+        .badge-legenda { padding: 2px 5px; border-radius: 4px; font-size: 10px; font-weight: bold; color: #000; margin-left: 4px; display: inline-block; }
+        #status { font-weight: bold; font-size: 13px; color: #53FC18; font-family: monospace; }
+        .btn-cc-toggle { padding: 10px 20px; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; font-size: 13px; text-transform: uppercase; width: fit-content; }
+        .area-chat-fake { flex: 1; background: #121212; border: 1px solid #222; border-radius: 6px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #555; font-size: 13px; }
+        .caixa-log-erros { background: #000; border: 1px solid #dc3545; padding: 10px; border-radius: 6px; height: 120px; overflow-y: auto; font-family: monospace; font-size: 11px; box-sizing: border-box; text-align: left; }
     </style>
 </head>
+
 <body>
-
-    <div class="lado-esquerdo">
-        <!-- Bloqueio que força o clique inicial exigido pelo navegador -->
-        <div id="bloqueio-inicial">
-            <button class="btn-despertar" onclick="despertarMonitor()">Ligar Monitor de Reacts</button>
+    <div class="painel-estudio">
+        <!-- COLUNA 1: DOCK ESQUERDO -->
+        <div class="coluna-dock">
+            <h3>Adicionar Vídeo</h3>
+            <div class="container-inputs">
+                <input type="text" id="url" placeholder="Link do YouTube">
+                <input type="text" id="ouvinte" placeholder="Nome do Ouvinte">
+                <button class="btn-add-fila" onclick="adicionarVideo()">Adicionar à Fila</button>
+            </div>
+            <h3>Fila FIFO</h3>
+            <div class="rolagem-fila" id="lista-playlist"></div>
         </div>
-
-        <div id="aviso-fila-vazia">NENHUM VÍDEO NA FILA FIFO.<br><small style="color:#aaa;">Insira um link no Dock para iniciar.</small></div>
         
-        <div id="player"></div>
+        <!-- COLUNA 2: VÍDEO CENTRAL + CONTROLES INFERIORES -->
+        <div class="coluna-central">
+            <div class="bloco-video">
+                <div id="player"></div>
+            </div>
+            <div class="bloco-botoes-controle">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div id="status">Aguardando carregamento da API do YouTube...</div>
+                    <button id="btn-toggle-cc" onclick="alternarLegendaOBS()" class="btn-cc-toggle" style="background-color: #dc3545; color: white;">
+                        Legendas OBS: DESATIVADAS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- COLUNA 3: CHAT / MONITOR DE ERROS DIREITO -->
+        <div class="coluna-chat">
+            <h3>Chat da Transmissão</h3>
+            <div class="area-chat-fake" style="margin-bottom: 12px; flex: 1; display: flex; padding: 0; background: #121212; border: 1px solid #222; border-radius: 6px; overflow: hidden;">
+                <!-- O SEGREDO ESTÁ AQUI: width e height em 100% com borda zerada para fundir no design -->
+                <iframe src="https://unified-chat.com/?twitch=vovozilla&kick=vovozilla&expand=1" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+            <h3>Logs de Erro da Live</h3>
+            <div class="caixa-log-erros" id="caixa-log-erros">
+                Nenhum problema detectado até o momento.
+            </div>
+        </div>
     </div>
 
-    <div class="lado-direito">
-        <!-- Chat Twitch -->
-        <!-- <div class="chat-container"> -->
-        <!--     <div class="chat-titulo" style="border-bottom: 2px solid #9146FF;">Chat Twitch</div> -->
-        <!--     <iframe src="https://nightdev.com/hosted/obschat?theme=undefined&channel=vovozilla&fade=false&bot_activity=false&prevent_clipping=false"></iframe> -->
-        <!-- </div> -->
-        
-        
-        <!-- Chat Kick -->
-        <div class="chat-container" style="border-top: 2px solid #333;">
-            <div class="chat-titulo" style="border-bottom: 2px solid #53FC18; color: #53FC18;">Chat</div>
-            <iframe src="https://unified-chat.com/?twitch=vovozilla&kick=vovozilla&expand=1"></iframe>
-        </div>
-
-    </div>
-
-    <script>
-        let player = null;
-        let videoIdAtivo = null;
-        let velocidadeGlobalMonitor = 1.0;
-        let apiPronta = false;
-        let monitorAtivado = false;
-
-        function despertarMonitor() {
-            monitorAtivado = true;
-            document.getElementById("bloqueio-inicial").style.display = "none";
-            
-            // --- CARREGAMENTO SEGURO DA API DO YOUTUBE ---
-            // Injeção direta no head de forma limpa, evitando erros de array no DOM
+        <script>
+        (function() {
             var dominioBase = "https://youtube.com";
             var caminhoApi = "/iframe_api";
             var linkCompletoApi = dominioBase + caminhoApi;
-
             var tagScript = document.createElement('script');
             tagScript.src = linkCompletoApi;
             document.head.appendChild(tagScript);
-        }
+        })();
 
-        // Executado de forma automática assim que a tag injetada acima terminar de baixar
+        let player = null;
+        let videoIdAtivo = null;
+        let apiPronta = false;
+        let velocidadeGlobalMonitor = 1.0;
+        let statusCCOBS = 0; 
+
         function onYouTubeIframeAPIReady() {
             apiPronta = true;
-            setInterval(sincronizarComPython, 1000);
+            setInterval(sincronizarTudoComPython, 1500);
+            setInterval(monitorarErrosFila, 3000);
         }
 
-
-        async function sincronizarComPython() {
-            if (!apiPronta || !monitorAtivado) return;
+        async function sincronizarTudoComPython() {
+            if (!apiPronta) return;
             try {
-                // Inserção da velocidade na URL do fetch
-                const res = await fetch('/api/estado_sincronizado?velocidade=' + velocidadeGlobalMonitor);
+                const res = await fetch(`/api/estado_sincronizado?velocidade=${velocidadeGlobalMonitor}&cc=${statusCCOBS}`);
                 const dados = await res.json();
-                // Se o arquivo JSON estiver vazio, exibe o texto de alerta em tela
+                const playlist = dados.lista_completa;
+                const statusDiv = document.getElementById("status");
+
                 if (!dados.id) {
                     if (player && typeof player.stopVideo === 'function') player.stopVideo();
-                    document.getElementById("aviso-fila-vazia").style.display = "block";
                     videoIdAtivo = null;
+                    statusDiv.innerText = "SISTEMA OCIOSO - FILA VAZIA";
+                    document.getElementById('lista-playlist').innerHTML = '';
                     return;
                 }
 
-                // Oculta o aviso caso tenha vídeo rodando
-                document.getElementById("aviso-fila-vazia").style.display = "none";
+                statusDiv.innerText = `VÍDEO ATIVO: ${dados.id} | ${dados.status.toUpperCase()} | VELOCIDADE: ${dados.velocidade}x`;
 
                 if (videoIdAtivo !== dados.id) {
                     videoIdAtivo = dados.id;
@@ -130,9 +121,7 @@
                         player = new YT.Player('player', {
                             height: '100%', width: '100%', videoId: dados.id,
                             playerVars: { 'autoplay': 1, 'controls': 1, 'rel': 0 },
-                            events: { 
-                                'onStateChange': onPlayerStateChange,
-                                // INSERÇÃO AQUI: Captura quando você clica na velocidade no tablet
+                            events: {
                                 'onPlaybackRateChange': function(e) { velocidadeGlobalMonitor = e.data; }
                             }
                         });
@@ -141,42 +130,97 @@
                     }
                 }
 
-
                 if (player && typeof player.getPlayerState === 'function') {
                     const state = player.getPlayerState();
-                    
                     if (dados.status === 'tocando' && state !== YT.PlayerState.PLAYING) {
                         player.playVideo();
                     } else if (dados.status !== 'tocando' && state === YT.PlayerState.PLAYING) {
                         player.pauseVideo();
                     }
-
-                    if (state === YT.PlayerState.PLAYING && typeof player.getCurrentTime === 'function') {
-                        fetch('/api/atualizar_tempo', {
+                    if (dados.velocidade && typeof player.setPlaybackRate === 'function') {
+                        if (player.getPlaybackRate() !== dados.velocidade) {
+                            player.setPlaybackRate(dados.velocidade);
+                        }
+                    }
+                    if (typeof player.getCurrentTime === 'function' && state === YT.PlayerState.PLAYING) {
+                        await fetch('/api/atualizar_tempo', {
                             method: 'POST',
                             headers: {'Content-Type': 'application/json'},
                             body: JSON.stringify({ tempo: player.getCurrentTime() })
                         });
                     }
                 }
-            } catch (e) { console.error("Falha na requisição de sincronia:", e); }
+
+                const lista = document.getElementById('lista-playlist');
+                lista.innerHTML = '';
+                playlist.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = `item-fila ${index === 0 ? 'topo' : ''}`;
+                    let botoesHTML = '<div class="botoes-inline">';
+                    if (index > 1) {
+                        botoesHTML += `<button class="btn-mover-proximo" onclick="moverProximo('${item.id}')">Puxar p/ Próximo</button>`;
+                    }
+                    botoesHTML += `<button class="btn-remove" onclick="removerVideo('${item.id}')">Remover</button>`;
+                    botoesHTML += '</div>';
+
+                    let statusLabel = "Aguardando";
+                    if (index === 0) { statusLabel = dados.status === "tocando" ? "Tocando" : "Pausado"; }
+
+                    let corSelo = "#ffc107"; 
+                    let textoSelo = item.status_legenda || "Baixando Legendas";
+                    if (textoSelo === "Pronto") { corSelo = "#28a745"; }
+                    const etiquetaLegenda = `<span class="badge-legenda" style="background-color: ${corSelo};">${textoSelo}</span>`;
+
+                    div.innerHTML = `
+                        <span class="titulo-video">${item.titulo}</span>
+                        <span class="meta-video">Por: <strong>${item.ouvinte}</strong> | ${statusLabel} | CC: ${etiquetaLegenda}</span>
+                        ${botoesHTML}
+                    `;
+                    lista.appendChild(div);
+                });
+            } catch (erro) { console.error(erro); }
         }
 
-        function onPlayerStateChange(event) {
-            if (event.data === YT.PlayerState.PLAYING) enviarStatus('tocando');
-            if (event.data === YT.PlayerState.PAUSED) enviarStatus('pausado');
-            if (event.data === YT.PlayerState.ENDED) {
-                fetch(`/api/remover/${videoIdAtivo}`, { method: 'DELETE' });
-                videoIdAtivo = null;
+        function alternarLegendaOBS() {
+            statusCCOBS = statusCCOBS === 0 ? 1 : 0;
+            const btn = document.getElementById('btn-toggle-cc');
+            if (statusCCOBS === 1) {
+                btn.innerText = "Legendas OBS: ATIVADAS";
+                btn.style.backgroundColor = "#28a745";
+            } else {
+                btn.innerText = "Legendas OBS: DESATIVADAS";
+                btn.style.backgroundColor = "#dc3545";
             }
         }
 
-        async function enviarStatus(st) {
-            await fetch('/api/status', {
+        async function adicionarVideo() {
+            const url = document.getElementById('url').value;
+            const ouvinte = document.getElementById('ouvinte').value;
+            if(!url) return;
+            await fetch('/api/adicionar', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ status: st })
+                body: JSON.stringify({url, ouvinte: ouvinte || 'Anônimo'})
             });
+            document.getElementById('url').value = '';
+            document.getElementById('ouvinte').value = '';
+        }
+
+        async function moverProximo(id) { await fetch(`/api/mover_para_proximo/${id}`, { method: 'POST' }); }
+        async function removerVideo(id) { await fetch(`/api/remover/${id}`, { method: 'DELETE' }); }
+
+        async function monitorarErrosFila() {
+            try {
+                const res = await fetch('/api/log_erros_legendas');
+                const erros = await res.json();
+                const caixa = document.getElementById('caixa-log-erros');
+                if (erros && erros.length > 0) {
+                    caixa.innerHTML = erros.map(e => `<div style="margin-bottom: 3px; border-left: 3px solid #dc3545; padding-left: 5px; color: #ff8888;">${e}</div>`).join('');
+                    caixa.scrollTop = caixa.scrollHeight;
+                } else {
+                    caixa.innerHTML = "Nenhum problema detectado na fila até o momento.";
+                }
+            } catch (e) { console.error(e); }
         }
     </script>
 </body>

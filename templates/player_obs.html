@@ -4,21 +4,55 @@
     <meta charset="UTF-8">
     <title>Player OBS - Receptor</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
-        #player { width: 100%; height: 100%; border: none; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; position: relative; }
+        #player { width: 100%; height: 100%; border: none; position: relative; z-index: 1; }
+        
+        /* Barra de legenda estilo Netflix com Z-INDEX MÁXIMO para flutuar por cima do vídeo */
+        #barra-legenda-obs {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 90%;
+            text-align: center;
+            font-size: 48px; /* Um pouco maior por não ter fundo */
+            color: #ffffff;
+            font-weight: bold;
+            font-family: 'Segoe UI', -apple-system, sans-serif;
+            line-height: 1.3;
+            pointer-events: none;
+            z-index: 99999;
+            
+            /* Borda preta absoluta em volta de cada letra (3px de espessura) */
+            text-shadow: 
+                3px 3px 0px #000, -3px -3px 0px #000, 
+                3px -3px 0px #000, -3px 3px 0px #000, 
+                0px 3px 0px #000, 0px -3px 0px #000, 
+                3px 0px 0px #000, -3px 0px 0px #000,
+                2px 2px 4px rgba(0,0,0,0.8); /* Sombra suave extra projetada no fundo */
+        }
     </style>
 </head>
 <body>
     <div id="player"></div>
+    <div id="barra-legenda-obs"></div>
+    
     <script>
         let player = null;
         let videoIdAtivo = null;
         let apiPronta = false;
+        
+        // Controle de dados locais das legendas
+        let listaLegendasLocal = [];
+        let idLegendaCarregada = null;
+        let ccAtivadoNoMonitor = false;
 
         // Executado assim que o script anexado abaixo terminar de baixar
         function onYouTubeIframeAPIReady() {
             apiPronta = true;
             setInterval(sincronizarComPython, 1000);
+            
+            // CORREÇÃO: Nome batendo exatamente com a função declarada abaixo
+            setInterval(sincronizarLegendaNaTela, 100);
         }
 
         async function sincronizarComPython() {
@@ -30,11 +64,19 @@
                 if (!dados.id) {
                     if (player && typeof player.stopVideo === 'function') player.stopVideo();
                     videoIdAtivo = null;
+                    document.getElementById("barra-legenda-obs").style.display = "none";
                     return;
                 }
 
+                // Captura se as legendas estão ligadas ou desligadas no monitor
+                ccAtivadoNoMonitor = dados.cc === 1;
+
                 if (videoIdAtivo !== dados.id) {
                     videoIdAtivo = dados.id;
+                    listaLegendasLocal = []; // Reseta cache
+                    idLegendaCarregada = null;
+                    document.getElementById("barra-legenda-obs").style.display = "none";
+                    
                     if (!player) {
                         player = new YT.Player('player', {
                             height: '100%', width: '100%', videoId: dados.id,
@@ -54,30 +96,87 @@
                         player.pauseVideo();
                     }
 
-                    // --- INSERÇÃO AQUI: SINCRONIZAR A VELOCIDADE NO OBS ---
                     if (dados.velocidade && typeof player.getPlaybackRate === 'function' && typeof player.setPlaybackRate === 'function') {
                         if (player.getPlaybackRate() !== dados.velocidade) {
                             player.setPlaybackRate(dados.velocidade);
                         }
                     }
-                    // -----------------------------------------------------------------
 
                     if (typeof player.getCurrentTime === 'function') {
                         const tempoLocal = player.getCurrentTime();
-                        // MODIFICAÇÃO AQUI: Compensamos o atraso adicionando + 1s ao tempo alvo vindo do Python
                         const tempoAlvoComCompensacao = dados.tempo + 1.0;
 
-                        // Reduzimos o limite para 1 segundo para garantir que ele force e trave na distância ideal
                         if (Math.abs(tempoLocal - tempoAlvoComCompensacao) > 1 && dados.tempo > 0) {
                             player.seekTo(tempoAlvoComCompensacao, true);
                         }
                     }
                 }
+
+                // Baixa as legendas da API se o CC estiver ativo
+                if (ccAtivadoNoMonitor && videoIdAtivo && idLegendaCarregada !== videoIdAtivo) {
+                    try {
+                        const resLeg = await fetch('/api/legendas_sincronizadas?id=' + videoIdAtivo);
+                        listaLegendasLocal = await resLeg.json();
+                        idLegendaCarregada = videoIdAtivo;
+                        console.log("Legendas carregadas localmente no OBS:", listaLegendasLocal.length);
+                    } catch (e) { console.error("Erro ao carregar legendas:", e); }
+                }
+
+//                // TESTE DE FORÇA BRUTA: Ignora o botão do monitor e tenta baixar o SRT direto se houver um ID ativo
+//                if (videoIdAtivo && idLegendaCarregada !== videoIdAtivo) {
+//                    try {
+//                        console.log("Tentando puxar legenda para o ID:", videoIdAtivo);
+//                        const resLeg = await fetch('/api/legendas_sincronizadas?id=' + videoIdAtivo);
+//                        listaLegendasLocal = await resLeg.json();
+//                        idLegendaCarregada = videoIdAtivo;
+//                        console.log("SUCESSO COM SRT! Total de linhas carregadas:", listaLegendasLocal.length);
+//                    } catch (e) { console.error("Erro crítico no fetch do SRT:", e); }
+//                }
+
             } catch (e) { console.error("Erro na sincronia do OBS:", e); }
         }
 
-        // --- CARREGAMENTO SEGURO DA API DO YOUTUBE (MÉTODO DO MONITOR) ---
-        // Construção limpa usando variáveis em duas linhas e injeção sem erros de array
+
+
+//        // FUNÇÃO DE SINCRONISMO DIRETO COM O PLAYER DO OBS
+//        function sincronizarLegendaNaTela() {
+//            const elementoLegenda = document.getElementById("barra-legenda-obs");
+//            
+//            // REMOVIDA A TRAVA DO CC NO MONITOR APENAS PARA VALIDAR O ARQUIVO SRT FÍSICO
+//            if (listaLegendasLocal.length === 0 || !player || typeof player.getCurrentTime !== 'function') {
+//                elementoLegenda.style.display = "none";
+//                return;
+//            }
+
+        function sincronizarLegendaNaTela() {
+            const elementoLegenda = document.getElementById("barra-legenda-obs");
+            
+            // Oculta imediatamente se o CC for desligado ou não houver dados
+            if (!ccAtivadoNoMonitor || listaLegendasLocal.length === 0 || !player || typeof player.getCurrentTime !== 'function') {
+                elementoLegenda.style.display = "none";
+                return;
+            }
+
+            // Pega o tempo real e exato do vídeo rodando dentro do OBS agora
+            const tempoAtual = player.getCurrentTime();
+            let textoExibir = "";
+
+            for (let i = 0; i < listaLegendasLocal.length; i++) {
+                if (tempoAtual >= listaLegendasLocal[i].inicio && tempoAtual <= listaLegendasLocal[i].fim) {
+                    textoExibir = listaLegendasLocal[i].texto;
+                    break;
+                }
+            }
+
+            if (textoExibir !== "") {
+                elementoLegenda.innerText = textoExibir;
+                elementoLegenda.style.display = "block";
+            } else {
+                elementoLegenda.style.display = "none";
+            }
+        }
+
+        // --- CARREGAMENTO SEGURO DA API DO YOUTUBE ---
         (function() {
             var dominioBase = "https://youtube.com";
             var caminhoApi = "/iframe_api";
